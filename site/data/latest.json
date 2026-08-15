@@ -1,0 +1,49 @@
+{
+  "generated_at": null,
+  "since": null,
+  "repositories": {
+    "vllm-project/vllm": {
+      "merged_prs": [],
+      "opened_prs": [],
+      "commits": [],
+      "stats": {
+        "merged": 0,
+        "opened": 0,
+        "commits": 0
+      }
+    },
+    "vllm-project/vllm-ascend": {
+      "merged_prs": [],
+      "opened_prs": [],
+      "commits": [],
+      "stats": {
+        "merged": 0,
+        "opened": 0,
+        "commits": 0
+      }
+    },
+    "sgl-project/sglang": {
+      "merged_prs": [],
+      "opened_prs": [],
+      "commits": [],
+      "stats": {
+        "merged": 0,
+        "opened": 0,
+        "commits": 0
+      }
+    },
+    "sgl-project/sglang-omni": {
+      "merged_prs": [],
+      "opened_prs": [],
+      "commits": [],
+      "stats": {
+        "merged": 0,
+        "opened": 0,
+        "commits": 0
+      }
+    }
+  },
+  "category_counts": {},
+  "focus_items": [],
+  "message": "Waiting for the first GitHub Actions collection run."
+}
