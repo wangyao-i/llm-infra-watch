@@ -44,6 +44,18 @@
       <div id="repoCards" class="repo-grid"></div>
     </section>
 
+    <section class="filter-panel">
+      <div class="section-title">
+        <div>
+          <div class="eyebrow">CATEGORY FILTER</div>
+          <h2>按技术分类查看</h2>
+        </div>
+        <button id="clearCategory" class="ghost-btn" type="button">清除分类</button>
+      </div>
+      <div id="categoryChips" class="category-chips"></div>
+      <div id="activeCategoryText" class="filter-summary">当前：全部分类</div>
+    </section>
+
     <section>
       <div class="section-title">
         <div>
@@ -73,6 +85,7 @@
         </div>
         <div class="filters">
           <select id="repoFilter"><option value="">全部仓库</option></select>
+          <select id="categoryFilter"><option value="">全部分类</option></select>
           <select id="kindFilter">
             <option value="">全部类型</option>
             <option value="merged">Merged PR</option>
