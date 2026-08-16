@@ -1,889 +1,196 @@
 {
-  "generated_at": "2026-08-16T01:20:20Z",
-  "since": "2026-08-15T07:04:33Z",
+  "generated_at": "2026-08-16T04:02:54Z",
+  "since": "2026-08-16T01:20:20Z",
   "repositories": {
     "vllm-project/vllm": {
       "merged_prs": [
         {
-          "number": 49585,
-          "title": "[EC Connector] Added Build Connector Worker Meta for EC Connector",
-          "author": "omerpaz95",
-          "url": "https://github.com/vllm-project/vllm/pull/49585",
-          "time": "2026-08-15T22:40:39Z",
-          "categories": [
-            "Scheduler / Runtime"
-          ],
-          "analysis": "可能改变请求调度、batching、执行流水或推理时延。",
-          "draft": false,
-          "additions": 430,
-          "deletions": 16,
-          "changed_files": 16,
-          "merge_commit_sha": "fa9d67f7828e9bc105912ddf41dc384105732b1e",
-          "kind": "merged"
-        },
-        {
-          "number": 49613,
-          "title": "[Bugfix][Sampling] Clear empty side on thinking-budget asymmetric SWAP",
-          "author": "hsusul",
-          "url": "https://github.com/vllm-project/vllm/pull/49613",
-          "time": "2026-08-15T21:13:03Z",
+          "number": 51318,
+          "title": "[Bugfix][DSv4] Revert adaptive C128A metadata packing",
+          "author": "tobymao",
+          "url": "https://github.com/vllm-project/vllm/pull/51318",
+          "time": "2026-08-16T01:39:24Z",
           "categories": [
             "Ascend / NPU",
-            "Scheduler / Runtime"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 97,
-          "deletions": 2,
-          "changed_files": 2,
-          "merge_commit_sha": "c94cdd0ae03865c00b694ca6f13b2d2bc4360fcd",
-          "kind": "merged"
-        },
-        {
-          "number": 52445,
-          "title": "[Bugfix][Model] Kimi-K3 MegaMoE: pass situ_beta/situ_linear_beta to fp8_fp4_mega_moe",
-          "author": "UranusSeven",
-          "url": "https://github.com/vllm-project/vllm/pull/52445",
-          "time": "2026-08-15T18:59:22Z",
-          "categories": [
-            "Quantization",
-            "MoE"
-          ],
-          "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
-          "draft": false,
-          "additions": 2,
-          "deletions": 2,
-          "changed_files": 1,
-          "merge_commit_sha": "ed0f4750f8766c2cc3984be4f1ba073a6915d4ed",
-          "kind": "merged"
-        },
-        {
-          "number": 51901,
-          "title": "[CI/Build] Add warning for unsupported global PTX architecture requests in... ",
-          "author": "shanewidanagama",
-          "url": "https://github.com/vllm-project/vllm/pull/51901",
-          "time": "2026-08-15T14:01:52Z",
-          "categories": [
-            "Other"
-          ],
-          "analysis": "常规工程变化；可结合修改文件和 benchmark 判断实际影响。",
-          "draft": false,
-          "additions": 63,
-          "deletions": 5,
-          "changed_files": 4,
-          "merge_commit_sha": "d4801990a45792c7081652f8ebea4ee56ceb67f9",
-          "kind": "merged"
-        },
-        {
-          "number": 51538,
-          "title": "[Bugfix] Make DSV4 sparse MLA work end-to-end for plain decode, MTP, and DSpark",
-          "author": "lucifer1004",
-          "url": "https://github.com/vllm-project/vllm/pull/51538",
-          "time": "2026-08-15T14:01:32Z",
-          "categories": [
-            "Quantization",
             "MoE",
             "Attention / KV",
             "Distributed / Comm",
             "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
-          "draft": false,
-          "additions": 797,
-          "deletions": 120,
-          "changed_files": 20,
-          "merge_commit_sha": "97388c44f9c608f83318e0c9540a536cd7de3e0d",
-          "kind": "merged"
-        },
-        {
-          "number": 45802,
-          "title": "[Frontend]  Support count_reasoning_tokens in the Streaming Parser Engine",
-          "author": "chaunceyjiang",
-          "url": "https://github.com/vllm-project/vllm/pull/45802",
-          "time": "2026-08-15T13:51:15Z",
-          "categories": [
-            "Ascend / NPU",
-            "Quantization",
-            "MoE",
-            "Omni / Multimodal"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 669,
-          "deletions": 73,
-          "changed_files": 16,
-          "merge_commit_sha": "ac2ae8798c7ef59c1924d5c0447a4279fa645770",
-          "kind": "merged"
-        },
-        {
-          "number": 52431,
-          "title": "[Bugfix] Fix modelscope usage",
-          "author": "DarkLight1337",
-          "url": "https://github.com/vllm-project/vllm/pull/52431",
-          "time": "2026-08-15T09:40:24Z",
-          "categories": [
-            "Other"
-          ],
-          "analysis": "常规工程变化；可结合修改文件和 benchmark 判断实际影响。",
-          "draft": false,
-          "additions": 3,
-          "deletions": 5,
-          "changed_files": 2,
-          "merge_commit_sha": "5cecfc01375052698823fc401e31518fb32a981e",
-          "kind": "merged"
-        },
-        {
-          "number": 52384,
-          "title": "[Rust Frontend][gRPC] Preserve skip_special_tokens decoding option",
-          "author": "biswapanda",
-          "url": "https://github.com/vllm-project/vllm/pull/52384",
-          "time": "2026-08-15T08:54:59Z",
-          "categories": [
-            "Scheduler / Runtime"
-          ],
-          "analysis": "可能改变请求调度、batching、执行流水或推理时延。",
-          "draft": false,
-          "additions": 5,
-          "deletions": 1,
-          "changed_files": 2,
-          "merge_commit_sha": "42156466db66f6d54cbea6075af82304cdfdaa6a",
-          "kind": "merged"
-        }
-      ],
-      "opened_prs": [
-        {
-          "number": 52478,
-          "title": "[ROCm][CI] Fix intermittent GPU memory fault during sleep-mode wake-up",
-          "author": "AndreasKaratzas",
-          "url": "https://github.com/vllm-project/vllm/pull/52478",
-          "time": "2026-08-16T01:19:02Z",
-          "categories": [
-            "Attention / KV",
-            "Scheduler / Runtime"
-          ],
-          "analysis": "可能影响 Attention/KV Cache 的时延、显存效率或长上下文能力。",
-          "draft": false,
-          "additions": 220,
-          "deletions": 42,
-          "changed_files": 5,
-          "merge_commit_sha": "8c873619da65a441f265127331e938b12fddf26e",
-          "kind": "opened"
-        },
-        {
-          "number": 52477,
-          "title": "[Bugfix][Spec Decode][Structured Output] Drive grammar masks from GPU logit counts",
-          "author": "LucasWilkinson",
-          "url": "https://github.com/vllm-project/vllm/pull/52477",
-          "time": "2026-08-15T23:34:02Z",
-          "categories": [
-            "Ascend / NPU",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": true,
-          "additions": 71,
-          "deletions": 78,
-          "changed_files": 5,
-          "merge_commit_sha": "8484ef5cfb90d32e2c67795a2bf2f2eff2a79c8e",
-          "kind": "opened"
-        },
-        {
-          "number": 52476,
-          "title": "[Bugfix][Mamba] Avoid causal conv1d metadata alignment specialization",
-          "author": "sylvesterkaczmarek",
-          "url": "https://github.com/vllm-project/vllm/pull/52476",
-          "time": "2026-08-15T22:37:09Z",
-          "categories": [
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能改变请求调度、batching、执行流水或推理时延。",
-          "draft": false,
-          "additions": 25,
-          "deletions": 2,
-          "changed_files": 1,
-          "merge_commit_sha": "52e75ed00ec2d2e3616beea2dab1e48db6195841",
-          "kind": "opened"
-        },
-        {
-          "number": 52474,
-          "title": "[Bugfix][Quark] Preserve structured quantization config lists",
-          "author": "sylvesterkaczmarek",
-          "url": "https://github.com/vllm-project/vllm/pull/52474",
-          "time": "2026-08-15T22:25:56Z",
-          "categories": [
-            "Quantization",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
-          "draft": false,
-          "additions": 25,
-          "deletions": 1,
-          "changed_files": 2,
-          "merge_commit_sha": "559579a3accf7527dcf752577ec2707bae510185",
-          "kind": "opened"
-        },
-        {
-          "number": 52473,
-          "title": "using existing uvicorn configuration for dp supervisor",
-          "author": "Gregory-Pereira",
-          "url": "https://github.com/vllm-project/vllm/pull/52473",
-          "time": "2026-08-15T22:05:59Z",
-          "categories": [
-            "Distributed / Comm"
-          ],
-          "analysis": "可能影响多卡扩展效率、collective 通信或并行策略。",
-          "draft": false,
-          "additions": 109,
-          "deletions": 0,
-          "changed_files": 2,
-          "merge_commit_sha": "1d661a251e300d1d61a1fab2209776d17e3c71c1",
-          "kind": "opened"
-        },
-        {
-          "number": 52472,
-          "title": "[Attention][MLA] Add GLM-5.2 TurboQuant sparse backend with DCP/MTP",
-          "author": "ketor",
-          "url": "https://github.com/vllm-project/vllm/pull/52472",
-          "time": "2026-08-15T20:56:02Z",
-          "categories": [
-            "Quantization",
-            "MoE",
-            "Attention / KV",
-            "Distributed / Comm",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
-          "draft": false,
-          "additions": 7654,
-          "deletions": 142,
-          "changed_files": 23,
-          "merge_commit_sha": "50c2265078c73bf37ec0ac00828c68717f162a54",
-          "kind": "opened"
-        },
-        {
-          "number": 52470,
-          "title": "fix(kv_transfer): abort async store jobs on preemption in Mooncake connector",
-          "author": "patrickswedish",
-          "url": "https://github.com/vllm-project/vllm/pull/52470",
-          "time": "2026-08-15T20:17:44Z",
-          "categories": [
-            "Attention / KV",
-            "Scheduler / Runtime"
-          ],
-          "analysis": "可能影响 Attention/KV Cache 的时延、显存效率或长上下文能力。",
-          "draft": false,
-          "additions": 199,
-          "deletions": 5,
-          "changed_files": 4,
-          "merge_commit_sha": "e393ab599782d99f568dd4bfe16c179af9a4e84d",
-          "kind": "opened"
-        },
-        {
-          "number": 52468,
-          "title": "[Perf] Scale num_warps with tile size in Triton reshape-and-cache kernels",
-          "author": "samuelkim7",
-          "url": "https://github.com/vllm-project/vllm/pull/52468",
-          "time": "2026-08-15T19:54:42Z",
-          "categories": [
-            "Quantization",
-            "Attention / KV",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
-          "draft": false,
-          "additions": 116,
-          "deletions": 2,
-          "changed_files": 2,
-          "merge_commit_sha": "75cc53039f384f49e10920f63acdd9319f6b7823",
-          "kind": "opened"
-        },
-        {
-          "number": 52467,
-          "title": "[Misc] Use VLLMValidationError in Cohere request validation",
-          "author": "frank-suwen",
-          "url": "https://github.com/vllm-project/vllm/pull/52467",
-          "time": "2026-08-15T19:36:00Z",
-          "categories": [
-            "Ascend / NPU",
-            "MoE",
-            "Distributed / Comm"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 36,
-          "deletions": 9,
-          "changed_files": 3,
-          "merge_commit_sha": "e4cba53fb1eae37b66f578816860f21ef0bdf4c7",
-          "kind": "opened"
-        },
-        {
-          "number": 52466,
-          "title": "[KV Connector] Add decode offloading to Mooncake Store consumers",
-          "author": "chengy-sysu",
-          "url": "https://github.com/vllm-project/vllm/pull/52466",
-          "time": "2026-08-15T19:23:40Z",
-          "categories": [
-            "Quantization",
-            "Attention / KV",
-            "Scheduler / Runtime"
-          ],
-          "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
-          "draft": false,
-          "additions": 303,
-          "deletions": 32,
-          "changed_files": 7,
-          "merge_commit_sha": "e84000b19c8db3af8aff6b9de8cd11f2ba6df6cd",
-          "kind": "opened"
-        },
-        {
-          "number": 52465,
-          "title": "[Bugfix] Keep every reasoning block in the Muse Glimmer parser",
-          "author": "vineethsaivs",
-          "url": "https://github.com/vllm-project/vllm/pull/52465",
-          "time": "2026-08-15T19:16:22Z",
-          "categories": [
-            "Other"
-          ],
-          "analysis": "常规工程变化；可结合修改文件和 benchmark 判断实际影响。",
-          "draft": false,
-          "additions": 94,
-          "deletions": 2,
-          "changed_files": 2,
-          "merge_commit_sha": "8501f394a0dc0659a4980c2c29184616b31be7ff",
-          "kind": "opened"
-        },
-        {
-          "number": 52464,
-          "title": "[Core][DP] Prefix-affinity tie-break in the internal DP load balancer",
-          "author": "kfastino",
-          "url": "https://github.com/vllm-project/vllm/pull/52464",
-          "time": "2026-08-15T19:03:42Z",
-          "categories": [
-            "Ascend / NPU",
-            "Quantization",
-            "Distributed / Comm",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 227,
-          "deletions": 3,
-          "changed_files": 2,
-          "merge_commit_sha": "7f716496eb1b1573a6d2ed44aa3ac79c9e913939",
-          "kind": "opened"
-        },
-        {
-          "number": 52462,
-          "title": "feat: use safetensors prefetch",
-          "author": "McPatate",
-          "url": "https://github.com/vllm-project/vllm/pull/52462",
-          "time": "2026-08-15T18:16:10Z",
-          "categories": [
-            "Ascend / NPU",
-            "Quantization",
-            "MoE",
-            "Distributed / Comm",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": true,
-          "additions": 74,
-          "deletions": 2,
-          "changed_files": 3,
-          "merge_commit_sha": "de74772b25350f3ff24dbad870a517a3e03068d5",
-          "kind": "opened"
-        },
-        {
-          "number": 52460,
-          "title": "[Bugfix] Fall back Mamba cache 'all' mode to 'align' on Model Runner V2 (#52317)",
-          "author": "bandham-manikanta",
-          "url": "https://github.com/vllm-project/vllm/pull/52460",
-          "time": "2026-08-15T17:37:33Z",
-          "categories": [
-            "Distributed / Comm",
-            "Scheduler / Runtime"
-          ],
-          "analysis": "可能影响多卡扩展效率、collective 通信或并行策略。",
-          "draft": false,
-          "additions": 124,
-          "deletions": 10,
-          "changed_files": 2,
-          "merge_commit_sha": "358e6c4d01e41a904b31a1ac48fa8eaccc96c37b",
-          "kind": "opened"
-        },
-        {
-          "number": 52459,
-          "title": "[Model] Register model capabilities directly",
-          "author": "matteso1",
-          "url": "https://github.com/vllm-project/vllm/pull/52459",
-          "time": "2026-08-15T17:02:25Z",
-          "categories": [
-            "Scheduler / Runtime"
-          ],
-          "analysis": "可能改变请求调度、batching、执行流水或推理时延。",
-          "draft": false,
-          "additions": 1418,
-          "deletions": 159,
-          "changed_files": 5,
-          "merge_commit_sha": "4927037199d8fa808270ca7d10132dcba61422fa",
-          "kind": "opened"
-        },
-        {
-          "number": 52458,
-          "title": "[Kimi-K3][Perf] Update FlashKDA for automatic K2 V-split",
-          "author": "BabyDrangoner",
-          "url": "https://github.com/vllm-project/vllm/pull/52458",
-          "time": "2026-08-15T16:53:32Z",
-          "categories": [
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能改变请求调度、batching、执行流水或推理时延。",
-          "draft": false,
-          "additions": 1,
-          "deletions": 1,
-          "changed_files": 1,
-          "merge_commit_sha": "60867008b5cf95e60ac3dc8fc6175e96e5adbd58",
-          "kind": "opened"
-        },
-        {
-          "number": 52456,
-          "title": "[bot] Enable google/gemma-4-E4B-it-assistant inference on Intel XPU",
-          "author": "Liangyx2",
-          "url": "https://github.com/vllm-project/vllm/pull/52456",
-          "time": "2026-08-15T16:11:36Z",
-          "categories": [
-            "Attention / KV",
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 61,
-          "deletions": 10,
-          "changed_files": 6,
-          "merge_commit_sha": null,
-          "kind": "opened"
-        },
-        {
-          "number": 52455,
-          "title": "[bot] Enable Gemma4 E4B inference on Intel XPU with per-layer heterogeneous head_dim",
-          "author": "Liangyx2",
-          "url": "https://github.com/vllm-project/vllm/pull/52455",
-          "time": "2026-08-15T16:05:09Z",
-          "categories": [
-            "Attention / KV",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能影响 Attention/KV Cache 的时延、显存效率或长上下文能力。",
-          "draft": false,
-          "additions": 75,
-          "deletions": 15,
-          "changed_files": 5,
-          "merge_commit_sha": null,
-          "kind": "opened"
-        },
-        {
-          "number": 52452,
-          "title": "[Bugfix][Structured Output][Spec Decode] Validate accepted blocks before commit",
-          "author": "voipmonitor",
-          "url": "https://github.com/vllm-project/vllm/pull/52452",
-          "time": "2026-08-15T14:11:47Z",
-          "categories": [
-            "Ascend / NPU",
-            "Scheduler / Runtime"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 490,
-          "deletions": 8,
-          "changed_files": 4,
-          "merge_commit_sha": "32cf7baa4d81bbc64755749cfa77925d859fb7af",
-          "kind": "opened"
-        },
-        {
-          "number": 52451,
-          "title": "[Bugfix] Initialize FP8 partition metadata for ParallelLMHead",
-          "author": "SyaOtiLan",
-          "url": "https://github.com/vllm-project/vllm/pull/52451",
-          "time": "2026-08-15T14:11:42Z",
-          "categories": [
-            "Quantization",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
-          "draft": false,
-          "additions": 52,
-          "deletions": 0,
-          "changed_files": 2,
-          "merge_commit_sha": "a8c45c08b343da9423c1ac9086eff2c0171eaa71",
-          "kind": "opened"
-        },
-        {
-          "number": 52449,
-          "title": "[Doc] Fix diagram rendering in GitHub Markdown",
-          "author": "johnmaster",
-          "url": "https://github.com/vllm-project/vllm/pull/52449",
-          "time": "2026-08-15T13:48:09Z",
-          "categories": [
-            "Omni / Multimodal"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 0,
-          "deletions": 8,
-          "changed_files": 2,
-          "merge_commit_sha": "de4b960493641f957e94bf1e3d60db16ac735387",
-          "kind": "opened"
-        },
-        {
-          "number": 52446,
-          "title": "[Bugfix] Raise ValueError instead of bare assert for expert-parallel divisibility check",
-          "author": "jagjeet-singh-ambak",
-          "url": "https://github.com/vllm-project/vllm/pull/52446",
-          "time": "2026-08-15T11:17:55Z",
-          "categories": [
-            "MoE",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能影响专家并行、token 路由、通信开销和 MoE 吞吐。",
-          "draft": false,
-          "additions": 92,
-          "deletions": 9,
-          "changed_files": 3,
-          "merge_commit_sha": "87b7bdfc1f8d97c5b226552d89c3cd38c231c998",
-          "kind": "opened"
-        },
-        {
-          "number": 52445,
-          "title": "[Bugfix][Model] Kimi-K3 MegaMoE: pass situ_beta/situ_linear_beta to fp8_fp4_mega_moe",
-          "author": "UranusSeven",
-          "url": "https://github.com/vllm-project/vllm/pull/52445",
-          "time": "2026-08-15T10:56:19Z",
-          "categories": [
-            "Quantization",
-            "MoE"
-          ],
-          "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
-          "draft": false,
-          "additions": 2,
-          "deletions": 2,
-          "changed_files": 1,
-          "merge_commit_sha": "ed0f4750f8766c2cc3984be4f1ba073a6915d4ed",
-          "kind": "opened"
-        },
-        {
-          "number": 52444,
-          "title": "[Bugfix][Responses] Route browser streams to web search events",
-          "author": "Jad-yehya",
-          "url": "https://github.com/vllm-project/vllm/pull/52444",
-          "time": "2026-08-15T10:05:48Z",
-          "categories": [
-            "MoE"
-          ],
-          "analysis": "可能影响专家并行、token 路由、通信开销和 MoE 吞吐。",
-          "draft": false,
-          "additions": 43,
-          "deletions": 6,
-          "changed_files": 3,
-          "merge_commit_sha": "796dc855e2bddec909d7a5fef2e66e5c90dfdb5e",
-          "kind": "opened"
-        },
-        {
-          "number": 52441,
-          "title": "[Bugfix][Multimodal] Keep Gemma 4 video frame counts on CPU",
-          "author": "chaunceyjiang",
-          "url": "https://github.com/vllm-project/vllm/pull/52441",
-          "time": "2026-08-15T09:34:09Z",
-          "categories": [
-            "Ascend / NPU",
-            "Quantization",
-            "MoE",
-            "Attention / KV",
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
             "Kernel / Performance"
           ],
           "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
           "draft": false,
           "additions": 7,
-          "deletions": 1,
+          "deletions": 56,
           "changed_files": 2,
-          "merge_commit_sha": "f8ae92c360aa83d1a2de955c99f902a8a1348d24",
+          "merge_commit_sha": "edd4c8176cfd98ece8a29beda574378c42971967",
+          "kind": "merged"
+        }
+      ],
+      "opened_prs": [
+        {
+          "number": 52491,
+          "title": "[Bugfix] Fix encoder fan-out in disaggregation proxy",
+          "author": "AnkitNakhawa",
+          "url": "https://github.com/vllm-project/vllm/pull/52491",
+          "time": "2026-08-16T03:48:04Z",
+          "categories": [
+            "Scheduler / Runtime",
+            "Omni / Multimodal"
+          ],
+          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
+          "draft": false,
+          "additions": 13,
+          "deletions": 2,
+          "changed_files": 1,
+          "merge_commit_sha": "5bd44920b08a1cd9b4f0d2109823717b43bc5769",
           "kind": "opened"
         },
         {
-          "number": 52440,
-          "title": "[MRV2][CUDA Graph] Guard attention metadata addresses before replay",
-          "author": "yiz-liu",
-          "url": "https://github.com/vllm-project/vllm/pull/52440",
-          "time": "2026-08-15T09:27:30Z",
+          "number": 52490,
+          "title": "fix(quantization): update test_configs assertions for AWQ resolution and CPU fallback",
+          "author": "SamGanYX",
+          "url": "https://github.com/vllm-project/vllm/pull/52490",
+          "time": "2026-08-16T03:31:44Z",
+          "categories": [
+            "Quantization"
+          ],
+          "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
+          "draft": false,
+          "additions": 6,
+          "deletions": 8,
+          "changed_files": 1,
+          "merge_commit_sha": "0a6fb544f4b6d6e6c793bf533a0a33840d7730b9",
+          "kind": "opened"
+        },
+        {
+          "number": 52488,
+          "title": "[ROCm] Keep DeepSeek V4 on MRV1 with the wide eager attention region",
+          "author": "Fangzhou-Ai",
+          "url": "https://github.com/vllm-project/vllm/pull/52488",
+          "time": "2026-08-16T03:27:56Z",
           "categories": [
             "Attention / KV",
-            "Scheduler / Runtime",
             "Kernel / Performance"
           ],
           "analysis": "可能影响 Attention/KV Cache 的时延、显存效率或长上下文能力。",
           "draft": false,
-          "additions": 135,
-          "deletions": 11,
-          "changed_files": 8,
-          "merge_commit_sha": "ad9f272a7bb5302020febad7732fb56c19b235d9",
-          "kind": "opened"
-        },
-        {
-          "number": 52439,
-          "title": "fix(missing_documentation): Class `StructuredOutputsParams` in vllm/sampling_params.py h",
-          "author": "nickhac",
-          "url": "https://github.com/vllm-project/vllm/pull/52439",
-          "time": "2026-08-15T09:15:46Z",
-          "categories": [
-            "Other"
-          ],
-          "analysis": "常规工程变化；可结合修改文件和 benchmark 判断实际影响。",
-          "draft": false,
-          "additions": 42,
-          "deletions": 0,
-          "changed_files": 1,
-          "merge_commit_sha": "1544fd5963b26c973f6f3c74af714c7e1d081e78",
-          "kind": "opened"
-        },
-        {
-          "number": 52438,
-          "title": "fix(missing_documentation): Class `SamplingType` in vllm/sampling_params.py has no docst",
-          "author": "nickhac",
-          "url": "https://github.com/vllm-project/vllm/pull/52438",
-          "time": "2026-08-15T09:14:33Z",
-          "categories": [
-            "Other"
-          ],
-          "analysis": "常规工程变化；可结合修改文件和 benchmark 判断实际影响。",
-          "draft": false,
-          "additions": 22,
-          "deletions": 0,
-          "changed_files": 1,
-          "merge_commit_sha": "720a8ba6c2944e92999bf10264a8a7c7126c4480",
-          "kind": "opened"
-        },
-        {
-          "number": 52437,
-          "title": "[Bugfix][Frontend] Bound Cohere stop sequences",
-          "author": "WamiqAdnan",
-          "url": "https://github.com/vllm-project/vllm/pull/52437",
-          "time": "2026-08-15T08:39:37Z",
-          "categories": [
-            "Ascend / NPU",
-            "Scheduler / Runtime"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 48,
-          "deletions": 6,
-          "changed_files": 2,
-          "merge_commit_sha": "079ad315b5d396d5656ef80710a4a7cec50706b5",
-          "kind": "opened"
-        },
-        {
-          "number": 52436,
-          "title": "[Bugfix][Spec Decode][Structured Output] DSpark: fix the grammar bitmask mapping when the draft budget is zero",
-          "author": "oops-oom",
-          "url": "https://github.com/vllm-project/vllm/pull/52436",
-          "time": "2026-08-15T08:39:05Z",
-          "categories": [
-            "MoE",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能影响专家并行、token 路由、通信开销和 MoE 吞吐。",
-          "draft": false,
-          "additions": 89,
-          "deletions": 15,
+          "additions": 96,
+          "deletions": 66,
           "changed_files": 3,
-          "merge_commit_sha": "8cdb4d8e117140c5770f8e8920f04dcb1183a377",
+          "merge_commit_sha": "b651ddf4607506654f06ea93a73f6c33498cb006",
           "kind": "opened"
         },
         {
-          "number": 52433,
-          "title": "[bot] Enable Gemma4 E4B (google/gemma-4-E4B-it-qat-w4a16-ct) on Intel XPU with mixed attention backends",
-          "author": "Liangyx2",
-          "url": "https://github.com/vllm-project/vllm/pull/52433",
-          "time": "2026-08-15T07:49:42Z",
+          "number": 52487,
+          "title": "[Bugfix] Reload speculative draft weights after Level 2 sleep wake",
+          "author": "Suppressor72",
+          "url": "https://github.com/vllm-project/vllm/pull/52487",
+          "time": "2026-08-16T03:15:43Z",
           "categories": [
             "Quantization",
-            "Attention / KV",
+            "Distributed / Comm",
             "Scheduler / Runtime",
             "Kernel / Performance"
           ],
           "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
+          "draft": false,
+          "additions": 198,
+          "deletions": 1,
+          "changed_files": 3,
+          "merge_commit_sha": "5161506bd9645e1c57a7a80f6fef92dbd625f4e6",
+          "kind": "opened"
+        },
+        {
+          "number": 52486,
+          "title": "[Core] Keep client stop strings dormant inside the reasoning segment",
+          "author": "brianmswheart",
+          "url": "https://github.com/vllm-project/vllm/pull/52486",
+          "time": "2026-08-16T02:52:45Z",
+          "categories": [
+            "Scheduler / Runtime"
+          ],
+          "analysis": "可能改变请求调度、batching、执行流水或推理时延。",
+          "draft": false,
+          "additions": 201,
+          "deletions": 4,
+          "changed_files": 2,
+          "merge_commit_sha": "7f76cd1f4d1bf82806ef0b609ea7d6523eae0273",
+          "kind": "opened"
+        },
+        {
+          "number": 52485,
+          "title": "[Bugfix][Spec Decode] Skip multimodal registry check for draft model configs",
+          "author": "jianliao",
+          "url": "https://github.com/vllm-project/vllm/pull/52485",
+          "time": "2026-08-16T02:42:28Z",
+          "categories": [
+            "Ascend / NPU",
+            "Quantization",
+            "Attention / KV",
+            "Distributed / Comm",
+            "Scheduler / Runtime",
+            "Omni / Multimodal"
+          ],
+          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
+          "draft": false,
+          "additions": 19,
+          "deletions": 0,
+          "changed_files": 2,
+          "merge_commit_sha": "94a507ecaca5b717c433d36167886be893708fec",
+          "kind": "opened"
+        },
+        {
+          "number": 52483,
+          "title": "Closed: opened in error",
+          "author": "yuan-alex",
+          "url": "https://github.com/vllm-project/vllm/pull/52483",
+          "time": "2026-08-16T02:13:55Z",
+          "categories": [
+            "Other"
+          ],
+          "analysis": "常规工程变化；可结合修改文件和 benchmark 判断实际影响。",
           "draft": true,
-          "additions": 72,
-          "deletions": 15,
-          "changed_files": 5,
-          "merge_commit_sha": null,
+          "additions": 269,
+          "deletions": 23,
+          "changed_files": 13,
+          "merge_commit_sha": "d92b90d740a9eb181763f06de4e36b79eadfc852",
+          "kind": "opened"
+        },
+        {
+          "number": 52482,
+          "title": "[Bugfix][V1][Multimodal] Ignore stale same-step encoder cache evictions",
+          "author": "gty111",
+          "url": "https://github.com/vllm-project/vllm/pull/52482",
+          "time": "2026-08-16T02:02:19Z",
+          "categories": [
+            "Scheduler / Runtime",
+            "Omni / Multimodal"
+          ],
+          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
+          "draft": false,
+          "additions": 22,
+          "deletions": 1,
+          "changed_files": 2,
+          "merge_commit_sha": "aaf4d93a45e1f05a807ff90a1b297399fd04eab2",
           "kind": "opened"
         }
       ],
       "commits": [],
       "stats": {
-        "merged": 8,
-        "opened": 31,
+        "merged": 1,
+        "opened": 8,
         "commits": 0
       }
     },
     "vllm-project/vllm-ascend": {
       "merged_prs": [
         {
-          "number": 14315,
-          "title": "[CI] update glm5.1-w8a8c8 glm5.2-w8a8c8 qwen3.6-35B qwen3.5-122B-w4a8",
-          "author": "guxin108",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14315",
-          "time": "2026-08-15T13:09:38Z",
-          "categories": [
-            "Ascend / NPU",
-            "Quantization"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 1723,
-          "deletions": 169,
-          "changed_files": 36,
-          "merge_commit_sha": "d5e9816065ede613327d93908f87fee9f5c47128",
-          "kind": "merged"
-        },
-        {
-          "number": 14341,
-          "title": "[BugFix]Sync minimax_m3 msa_m3_triton with main",
-          "author": "ZT-AIA",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14341",
-          "time": "2026-08-15T12:25:25Z",
-          "categories": [
-            "Ascend / NPU",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 272,
-          "deletions": 529,
-          "changed_files": 1,
-          "merge_commit_sha": "d6fc41e78cbf09663fd1239c21cb10ff738b3dbf",
-          "kind": "merged"
-        },
-        {
-          "number": 13975,
-          "title": "[Feature][MRV2] Adapt model runner v2 for routed-experts capture",
-          "author": "wuruiyun",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/13975",
-          "time": "2026-08-15T11:21:33Z",
-          "categories": [
-            "Ascend / NPU",
-            "MoE",
-            "Scheduler / Runtime"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 85,
-          "deletions": 40,
-          "changed_files": 6,
-          "merge_commit_sha": "21d8dba46c8973da4d1523ee21a19aa373fe6384",
-          "kind": "merged"
-        },
-        {
-          "number": 14325,
-          "title": "[Doc][Feature] Add Qwen3.8-27B tutorial",
-          "author": "AJF-cmd",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14325",
-          "time": "2026-08-15T09:50:28Z",
-          "categories": [
-            "Ascend / NPU",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 381,
-          "deletions": 0,
-          "changed_files": 1,
-          "merge_commit_sha": "f258cbbd898f2b05f38d96b20d1530d5e10f7923",
-          "kind": "merged"
-        },
-        {
-          "number": 13158,
-          "title": "[Refactor] decouple flashcomm and shared expert dp",
-          "author": "jiaqi-lee",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/13158",
-          "time": "2026-08-15T09:35:33Z",
-          "categories": [
-            "Ascend / NPU",
-            "MoE",
-            "Distributed / Comm",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 560,
-          "deletions": 132,
-          "changed_files": 19,
-          "merge_commit_sha": "3eb8dede168ad9e24e3bb548ed35db7e658dd40e",
-          "kind": "merged"
-        },
-        {
-          "number": 13818,
-          "title": "[Feature][KV Transfer][v0.26.0rc] Add SFA remote D2H connector for KV cache offload",
-          "author": "ader47",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/13818",
-          "time": "2026-08-15T09:13:32Z",
-          "categories": [
-            "Ascend / NPU",
-            "Attention / KV",
-            "Distributed / Comm",
-            "Scheduler / Runtime"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 7637,
-          "deletions": 642,
-          "changed_files": 45,
-          "merge_commit_sha": "75f81b58179ec1335228f7b3cea6558a93bb7a61",
-          "kind": "merged"
-        },
-        {
-          "number": 14322,
-          "title": "[v0.23.0][Doc] Add PD DCP consistency warning for SFA models",
-          "author": "pisceskkk",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14322",
-          "time": "2026-08-15T09:02:31Z",
-          "categories": [
-            "Attention / KV",
-            "Scheduler / Runtime"
-          ],
-          "analysis": "可能影响 Attention/KV Cache 的时延、显存效率或长上下文能力。",
-          "draft": false,
-          "additions": 18,
-          "deletions": 0,
-          "changed_files": 4,
-          "merge_commit_sha": "4424b2d0da4073f99e0f586d0153ae0b1bd9e85e",
-          "kind": "merged"
-        }
-      ],
-      "opened_prs": [
-        {
-          "number": 14362,
-          "title": "main_verify:test: skip pre-commit hooks",
-          "author": "czydyy",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14362",
-          "time": "2026-08-15T19:19:44Z",
+          "number": 14366,
+          "title": "[CI] Fix weekly test for missing OPENLIBING_SECRET",
+          "author": "zhangxinyuehfad",
+          "url": "https://github.com/vllm-project/vllm-ascend/pull/14366",
+          "time": "2026-08-16T03:12:01Z",
           "categories": [
             "Ascend / NPU"
           ],
@@ -892,32 +199,17 @@
           "additions": 1,
           "deletions": 0,
           "changed_files": 1,
-          "merge_commit_sha": "4e42963fdaad830b44ab04ccce8916e79bb10983",
-          "kind": "opened"
-        },
+          "merge_commit_sha": "9a276026c6e68faa6ea35f85a538f719bb508767",
+          "kind": "merged"
+        }
+      ],
+      "opened_prs": [
         {
-          "number": 14360,
-          "title": "[Misc]feat: adapt to vLLM main (3ac95255)",
-          "author": "vllm-ascend-ci",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14360",
-          "time": "2026-08-15T18:02:13Z",
-          "categories": [
-            "Ascend / NPU"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": true,
-          "additions": 130,
-          "deletions": 26,
-          "changed_files": 9,
-          "merge_commit_sha": "bc4a626c6dad6ee89cbad933c1dec5bbdbbf6a31",
-          "kind": "opened"
-        },
-        {
-          "number": 14358,
-          "title": "[v0.26.0rc][BugFix][MoE] Fix MegaMoe prefill buffer sizing",
-          "author": "jianzs",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14358",
-          "time": "2026-08-15T15:52:04Z",
+          "number": 14367,
+          "title": "[v0.26.0rc][Feature][LoRA][MoE] Backport W8A8 dynamic multi-LoRA + shared-expert LoRA from #13365",
+          "author": "Liuchenbing-2026",
+          "url": "https://github.com/vllm-project/vllm-ascend/pull/14367",
+          "time": "2026-08-16T03:55:35Z",
           "categories": [
             "Ascend / NPU",
             "Quantization",
@@ -928,228 +220,52 @@
           ],
           "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
           "draft": false,
-          "additions": 51,
-          "deletions": 14,
-          "changed_files": 5,
-          "merge_commit_sha": "9d75969b67f444d8505a64a8ca9b6927d52d41d0",
+          "additions": 919,
+          "deletions": 37,
+          "changed_files": 13,
+          "merge_commit_sha": "57ff4648ce8df51492f5e9d876c4a5202bb7aa60",
           "kind": "opened"
         },
         {
-          "number": 14356,
-          "title": "[v0.26.0rc][Misc] Pin MemFabric and MemCache dependency versions",
-          "author": "zouyida2052",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14356",
-          "time": "2026-08-15T12:08:08Z",
-          "categories": [
-            "Other"
-          ],
-          "analysis": "常规工程变化；可结合修改文件和 benchmark 判断实际影响。",
-          "draft": false,
-          "additions": 2,
-          "deletions": 2,
-          "changed_files": 1,
-          "merge_commit_sha": "e3cdb4ebb5e605990c8294be6ed4e528352ad3a8",
-          "kind": "opened"
-        },
-        {
-          "number": 14351,
-          "title": "[v0.24.0rc][Misc] Pin MemFabric and MemCache dependency versions",
-          "author": "zouyida2052",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14351",
-          "time": "2026-08-15T12:08:07Z",
+          "number": 14366,
+          "title": "[CI] Fix weekly test for missing OPENLIBING_SECRET",
+          "author": "zhangxinyuehfad",
+          "url": "https://github.com/vllm-project/vllm-ascend/pull/14366",
+          "time": "2026-08-16T02:55:14Z",
           "categories": [
             "Ascend / NPU"
           ],
           "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
           "draft": false,
-          "additions": 2,
-          "deletions": 2,
-          "changed_files": 1,
-          "merge_commit_sha": "1317fe0ec4d887c94abd2b2d4fe1fcde3ba8eb44",
-          "kind": "opened"
-        },
-        {
-          "number": 14354,
-          "title": "[v0.25.1rc][Misc] Pin MemFabric and MemCache dependency versions",
-          "author": "zouyida2052",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14354",
-          "time": "2026-08-15T12:08:07Z",
-          "categories": [
-            "Ascend / NPU"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 2,
-          "deletions": 2,
-          "changed_files": 1,
-          "merge_commit_sha": "424d5d1150c4df9be4a73e0c38df6f61d3c30af8",
-          "kind": "opened"
-        },
-        {
-          "number": 14352,
-          "title": "[v0.23.0][Misc] Pin MemFabric and MemCache dependency versions",
-          "author": "zouyida2052",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14352",
-          "time": "2026-08-15T12:08:07Z",
-          "categories": [
-            "Other"
-          ],
-          "analysis": "常规工程变化；可结合修改文件和 benchmark 判断实际影响。",
-          "draft": false,
-          "additions": 2,
-          "deletions": 2,
-          "changed_files": 1,
-          "merge_commit_sha": "bbf9b60f510691dc421269a8784b06174067d94f",
-          "kind": "opened"
-        },
-        {
-          "number": 14353,
-          "title": "[v0.22.1rc][Misc] Pin MemFabric and MemCache dependency versions",
-          "author": "zouyida2052",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14353",
-          "time": "2026-08-15T12:08:07Z",
-          "categories": [
-            "Other"
-          ],
-          "analysis": "常规工程变化；可结合修改文件和 benchmark 判断实际影响。",
-          "draft": false,
-          "additions": 2,
-          "deletions": 2,
-          "changed_files": 1,
-          "merge_commit_sha": "8f7594ef0802afd0b1edec0805da3965f0c66c2b",
-          "kind": "opened"
-        },
-        {
-          "number": 14350,
-          "title": "[v0.21.0rc][Misc] Pin MemFabric and MemCache dependency versions",
-          "author": "zouyida2052",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14350",
-          "time": "2026-08-15T12:08:07Z",
-          "categories": [
-            "Ascend / NPU"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 2,
-          "deletions": 2,
-          "changed_files": 1,
-          "merge_commit_sha": "4ce3bdf68a2e5a9714cf8fc9634e15017929c875",
-          "kind": "opened"
-        },
-        {
-          "number": 14355,
-          "title": "[Misc] Pin MemFabric and MemCache dependency versions",
-          "author": "zouyida2052",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14355",
-          "time": "2026-08-15T12:08:07Z",
-          "categories": [
-            "Ascend / NPU"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 2,
-          "deletions": 2,
-          "changed_files": 1,
-          "merge_commit_sha": "8f54ae3233f497844a8419b0f3cf1e5e9561f27c",
-          "kind": "opened"
-        },
-        {
-          "number": 14349,
-          "title": "[v0.20.2rc][Misc] Pin MemFabric and MemCache dependency versions",
-          "author": "zouyida2052",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14349",
-          "time": "2026-08-15T12:07:42Z",
-          "categories": [
-            "Other"
-          ],
-          "analysis": "常规工程变化；可结合修改文件和 benchmark 判断实际影响。",
-          "draft": false,
-          "additions": 2,
-          "deletions": 2,
-          "changed_files": 1,
-          "merge_commit_sha": "5e70aad3f725e16ce38151938878194a5fe1b139",
-          "kind": "opened"
-        },
-        {
-          "number": 14348,
-          "title": "[Doc]add Qwen3.8 tutorial to navigation",
-          "author": "Karryking3",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14348",
-          "time": "2026-08-15T10:32:08Z",
-          "categories": [
-            "Ascend / NPU"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 2,
+          "additions": 1,
           "deletions": 0,
           "changed_files": 1,
-          "merge_commit_sha": "97e2b809fdd19e907948c03eda034aec69fbf8d3",
+          "merge_commit_sha": "9a276026c6e68faa6ea35f85a538f719bb508767",
           "kind": "opened"
         },
         {
-          "number": 14346,
-          "title": "[Feature] Adaptation to PP overlay EPLB",
-          "author": "YangShuai52",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14346",
-          "time": "2026-08-15T10:06:58Z",
+          "number": 14365,
+          "title": "[Doc] Translated Doc files 2026-08-16",
+          "author": "vllm-ascend-ci",
+          "url": "https://github.com/vllm-project/vllm-ascend/pull/14365",
+          "time": "2026-08-16T01:58:27Z",
           "categories": [
-            "Ascend / NPU",
-            "MoE"
+            "Ascend / NPU"
           ],
           "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
           "draft": false,
-          "additions": 55,
-          "deletions": 2,
-          "changed_files": 2,
-          "merge_commit_sha": "bae5080b0eb927d30f5b74ea842951e3b93d8cca",
+          "additions": 1437,
+          "deletions": 204,
+          "changed_files": 9,
+          "merge_commit_sha": "3f10aecbc156647c0662be6a32ac7502b8d0b8b4",
           "kind": "opened"
         },
         {
-          "number": 14345,
-          "title": "[Ops][BugFix] Restore early routed-output reduce for AllGather + nonlinear routed_output_transform (fixes Kimi-K3 garbage output on A2)",
-          "author": "boes129",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14345",
-          "time": "2026-08-15T09:58:05Z",
-          "categories": [
-            "Ascend / NPU",
-            "MoE",
-            "Distributed / Comm",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 40,
-          "deletions": 7,
-          "changed_files": 1,
-          "merge_commit_sha": "87f730f4ac3c8dc6bf9117c4da15d4fef5c2b7ca",
-          "kind": "opened"
-        },
-        {
-          "number": 14344,
-          "title": "[CI] Align daily build OS with release, add selective CANN chip builds, disable triton-ascend by default for daily, and upgrade default CANN version",
-          "author": "du-ping1",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14344",
-          "time": "2026-08-15T09:37:12Z",
-          "categories": [
-            "Ascend / NPU",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 106,
-          "deletions": 125,
-          "changed_files": 21,
-          "merge_commit_sha": "24df82b1bae22479c42c48936e1d3ab98fc0ce74",
-          "kind": "opened"
-        },
-        {
-          "number": 14343,
-          "title": "[v0.26.0rc][Bugfix][MoE] Fix SiTU activation raising NotImplementedError in unquantized MoE MLP path",
-          "author": "EliasKaslan",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14343",
-          "time": "2026-08-15T09:26:45Z",
+          "number": 14364,
+          "title": "[BugFix][v0.25.1][Model] Propagate DeepSeek V4 routed SwiGLU limit",
+          "author": "QwertyJack",
+          "url": "https://github.com/vllm-project/vllm-ascend/pull/14364",
+          "time": "2026-08-16T01:40:00Z",
           "categories": [
             "Ascend / NPU",
             "Quantization",
@@ -1159,1226 +275,128 @@
           ],
           "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
           "draft": false,
-          "additions": 6,
-          "deletions": 1,
-          "changed_files": 1,
-          "merge_commit_sha": "3d37ef9ae9ee05f8d758a2f651ed6a5e1dc87317",
-          "kind": "opened"
-        },
-        {
-          "number": 14342,
-          "title": "[BugFix][310P] Fix MTP overlay prefixcache precision on 310P",
-          "author": "YangShuai52",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14342",
-          "time": "2026-08-15T09:05:18Z",
-          "categories": [
-            "Ascend / NPU",
-            "Distributed / Comm",
-            "Scheduler / Runtime"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 11,
-          "deletions": 11,
-          "changed_files": 4,
-          "merge_commit_sha": "6731cbd537726e7acdc7cd6266b5a2f8e5123256",
-          "kind": "opened"
-        },
-        {
-          "number": 14341,
-          "title": "[BugFix]Sync minimax_m3 msa_m3_triton with main",
-          "author": "ZT-AIA",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14341",
-          "time": "2026-08-15T09:04:14Z",
-          "categories": [
-            "Ascend / NPU",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 272,
-          "deletions": 529,
-          "changed_files": 1,
-          "merge_commit_sha": "d6fc41e78cbf09663fd1239c21cb10ff738b3dbf",
-          "kind": "opened"
-        },
-        {
-          "number": 14340,
-          "title": "[HMA] Suuport uncontigous kvcache in Hybrid models like Qwen3.5",
-          "author": "zhaochuang001",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14340",
-          "time": "2026-08-15T08:45:29Z",
-          "categories": [
-            "Ascend / NPU",
-            "Attention / KV"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 95,
-          "deletions": 142,
-          "changed_files": 6,
-          "merge_commit_sha": "8f8cc3adc67377058849762f471fdaa83427cacf",
-          "kind": "opened"
-        },
-        {
-          "number": 14338,
-          "title": "[Doc][310P][v0.23.0] The rollback prompt uses the nightly mirror. ",
-          "author": "YangShuai52",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14338",
-          "time": "2026-08-15T08:22:02Z",
-          "categories": [
-            "Omni / Multimodal"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 2,
-          "deletions": 22,
-          "changed_files": 12,
-          "merge_commit_sha": "4e3a548a8195564d904a37240b39676a8cd604c4",
-          "kind": "opened"
-        },
-        {
-          "number": 14337,
-          "title": "[Bugfix] v0.26.0rc missing bugfixes",
-          "author": "jiaqi-lee",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14337",
-          "time": "2026-08-15T08:14:28Z",
-          "categories": [
-            "Quantization"
-          ],
-          "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
-          "draft": false,
-          "additions": 1594,
-          "deletions": 370,
-          "changed_files": 56,
-          "merge_commit_sha": null,
-          "kind": "opened"
-        },
-        {
-          "number": 14336,
-          "title": "[BugFix][310P][v0.23.0] Fix MTP overlay prefixcache precision on 310P",
-          "author": "YangShuai52",
-          "url": "https://github.com/vllm-project/vllm-ascend/pull/14336",
-          "time": "2026-08-15T07:59:19Z",
-          "categories": [
-            "Ascend / NPU",
-            "Distributed / Comm",
-            "Scheduler / Runtime"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 11,
-          "deletions": 11,
-          "changed_files": 4,
-          "merge_commit_sha": "464e22cb9cd2b15425fa69fb9b70535b1b0345d6",
+          "additions": 59,
+          "deletions": 0,
+          "changed_files": 2,
+          "merge_commit_sha": "295a01ee3f8e7991a99060fbaa36a5c418d0e78f",
           "kind": "opened"
         }
       ],
       "commits": [],
       "stats": {
-        "merged": 7,
-        "opened": 22,
+        "merged": 1,
+        "opened": 4,
         "commits": 0
       }
     },
     "sgl-project/sglang": {
       "merged_prs": [
         {
-          "number": 34763,
-          "title": "[Spec] Support mamba-radix-cache-strategy extra_buffer_lazy with DFLASH",
-          "author": "gilfordting",
-          "url": "https://github.com/sgl-project/sglang/pull/34763",
-          "time": "2026-08-15T23:37:00Z",
-          "categories": [
-            "Ascend / NPU",
-            "MoE",
-            "Scheduler / Runtime"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 146,
-          "deletions": 8,
-          "changed_files": 4,
-          "merge_commit_sha": "4a6dc267e19f7e6f9361e0a00aa68b3830d22276",
-          "kind": "merged"
-        },
-        {
-          "number": 34961,
-          "title": "[CI] Pin the allowed_media_domains supplied-instance reads in the step-12 ratchet",
-          "author": "mmangkad",
-          "url": "https://github.com/sgl-project/sglang/pull/34961",
-          "time": "2026-08-15T23:35:20Z",
-          "categories": [
-            "Omni / Multimodal"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 2,
-          "deletions": 0,
-          "changed_files": 1,
-          "merge_commit_sha": "3802a725ac889c7e0ad45795c2550079a33c229b",
-          "kind": "merged"
-        },
-        {
-          "number": 30024,
-          "title": "[AMD] perf(sgl-kernel): default block_quota=16 for MLA page_first KV gather…",
-          "author": "TianDi101",
-          "url": "https://github.com/sgl-project/sglang/pull/30024",
-          "time": "2026-08-15T23:05:40Z",
-          "categories": [
-            "Attention / KV",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能影响 Attention/KV Cache 的时延、显存效率或长上下文能力。",
-          "draft": false,
-          "additions": 150,
-          "deletions": 6,
-          "changed_files": 2,
-          "merge_commit_sha": "d22c4cc177c4ecac1285fc2bc122311f0eb38646",
-          "kind": "merged"
-        },
-        {
-          "number": 34916,
-          "title": "[misc] Rename the WAR read-done fastpath to shared-read-done",
-          "author": "hnyls2002",
-          "url": "https://github.com/sgl-project/sglang/pull/34916",
-          "time": "2026-08-15T22:02:03Z",
-          "categories": [
-            "Attention / KV",
-            "Scheduler / Runtime"
-          ],
-          "analysis": "可能影响 Attention/KV Cache 的时延、显存效率或长上下文能力。",
-          "draft": false,
-          "additions": 225,
-          "deletions": 250,
-          "changed_files": 16,
-          "merge_commit_sha": "0f7aaceda5e60a2df56472f87b2b366665215daa",
-          "kind": "merged"
-        },
-        {
-          "number": 34837,
-          "title": "[AMD] Add concat_and_cast_mha_k_pad_kernel to support 12-head and enable K3 aiter prefill kernel",
-          "author": "1am9trash",
-          "url": "https://github.com/sgl-project/sglang/pull/34837",
-          "time": "2026-08-15T21:39:31Z",
+          "number": 31794,
+          "title": "[AMD][Fix] Qwen3.5: guard zero-grid launch in fused_qk_gemma_rmsnorm(_with_gate) (HIP invalid configuration on idle DP rank)",
+          "author": "yichiche",
+          "url": "https://github.com/sgl-project/sglang/pull/31794",
+          "time": "2026-08-16T04:02:54Z",
           "categories": [
             "Quantization",
             "MoE",
             "Attention / KV",
+            "Distributed / Comm",
             "Scheduler / Runtime",
-            "Omni / Multimodal",
             "Kernel / Performance"
           ],
           "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
           "draft": false,
-          "additions": 72,
-          "deletions": 0,
-          "changed_files": 1,
-          "merge_commit_sha": "4d0c5a89af7061178e4b7ab11d84c4dd2bc92482",
-          "kind": "merged"
-        },
-        {
-          "number": 34963,
-          "title": "Fix dsv4 kl test timeout",
-          "author": "ispobock",
-          "url": "https://github.com/sgl-project/sglang/pull/34963",
-          "time": "2026-08-15T17:57:41Z",
-          "categories": [
-            "Ascend / NPU"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 2,
-          "deletions": 1,
-          "changed_files": 2,
-          "merge_commit_sha": "dd458f3212dd4ddf0e1a7907bbf539b660e70d21",
-          "kind": "merged"
-        },
-        {
-          "number": 34796,
-          "title": "Add --http2-max-concurrent-streams server arg",
-          "author": "cctry",
-          "url": "https://github.com/sgl-project/sglang/pull/34796",
-          "time": "2026-08-15T17:34:50Z",
-          "categories": [
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能改变请求调度、batching、执行流水或推理时延。",
-          "draft": false,
-          "additions": 81,
+          "additions": 27,
           "deletions": 2,
           "changed_files": 5,
-          "merge_commit_sha": "e5b3a487515a8d76672f87c5d959eeb857394661",
+          "merge_commit_sha": "6314e9e4f5bdadd975969e8781dd1edcb27bb4a7",
           "kind": "merged"
         },
         {
-          "number": 34866,
-          "title": "update codeowner",
-          "author": "huangtingwei9988",
-          "url": "https://github.com/sgl-project/sglang/pull/34866",
-          "time": "2026-08-15T16:37:19Z",
-          "categories": [
-            "Kernel / Performance"
-          ],
-          "analysis": "包含 kernel 或性能优化，值得关注 benchmark 和硬件适配变化。",
-          "draft": false,
-          "additions": 1,
-          "deletions": 1,
-          "changed_files": 1,
-          "merge_commit_sha": "cef8a32b9de616c85b515c099fecfd1a81bbf8d0",
-          "kind": "merged"
-        },
-        {
-          "number": 33604,
-          "title": "Fix Whisper transcription for audio over 30 seconds",
-          "author": "shenxiul",
-          "url": "https://github.com/sgl-project/sglang/pull/33604",
-          "time": "2026-08-15T15:51:06Z",
-          "categories": [
-            "Ascend / NPU",
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 1279,
-          "deletions": 46,
-          "changed_files": 9,
-          "merge_commit_sha": "fb97be435969ee5ccbbeca8c3fbdd88051902d21",
-          "kind": "merged"
-        },
-        {
-          "number": 34952,
-          "title": "docs: define native diffusion model integration contract",
-          "author": "mickqian",
-          "url": "https://github.com/sgl-project/sglang/pull/34952",
-          "time": "2026-08-15T15:37:35Z",
+          "number": 34870,
+          "title": "Fix swa eviction frontier for bigram keys",
+          "author": "ispobock",
+          "url": "https://github.com/sgl-project/sglang/pull/34870",
+          "time": "2026-08-16T03:52:15Z",
           "categories": [
             "Distributed / Comm",
-            "Kernel / Performance"
+            "Scheduler / Runtime"
           ],
           "analysis": "可能影响多卡扩展效率、collective 通信或并行策略。",
           "draft": false,
-          "additions": 32,
-          "deletions": 17,
-          "changed_files": 1,
-          "merge_commit_sha": "4beb157e872d69388a81ac8488d78b7809c09760",
+          "additions": 96,
+          "deletions": 15,
+          "changed_files": 2,
+          "merge_commit_sha": "0f706c33d26425c94089e624567940a5a58be07c",
           "kind": "merged"
         },
         {
-          "number": 34471,
-          "title": "[diffusion] Support LTX-2.5",
-          "author": "AgainstEntropy",
-          "url": "https://github.com/sgl-project/sglang/pull/34471",
-          "time": "2026-08-15T15:36:03Z",
+          "number": 34736,
+          "title": "[Diffusion] Unify component residency controls",
+          "author": "mickqian",
+          "url": "https://github.com/sgl-project/sglang/pull/34736",
+          "time": "2026-08-16T03:24:48Z",
           "categories": [
-            "Ascend / NPU",
             "Quantization",
+            "Distributed / Comm",
             "Scheduler / Runtime",
             "Omni / Multimodal",
             "Kernel / Performance"
           ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
+          "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
           "draft": false,
-          "additions": 3693,
-          "deletions": 163,
-          "changed_files": 50,
-          "merge_commit_sha": "5c0ace30c03f0d87a9c852373dc6fe4e11687736",
+          "additions": 2627,
+          "deletions": 1421,
+          "changed_files": 70,
+          "merge_commit_sha": "e9fe58139f48ec2a22fe4000ef604fc6862b1bfe",
           "kind": "merged"
         },
         {
-          "number": 34891,
-          "title": "fix(diffusion): scope attention backend fallback",
-          "author": "mickqian",
-          "url": "https://github.com/sgl-project/sglang/pull/34891",
-          "time": "2026-08-15T14:00:46Z",
+          "number": 30900,
+          "title": "[AMD][Quantization][Bugfix] Fix bug related to fp8 max on gfx95x for per-token-group quant (ROCm)",
+          "author": "spandantiwari",
+          "url": "https://github.com/sgl-project/sglang/pull/30900",
+          "time": "2026-08-16T02:54:17Z",
           "categories": [
-            "Attention / KV",
+            "Quantization",
             "Kernel / Performance"
           ],
-          "analysis": "可能影响 Attention/KV Cache 的时延、显存效率或长上下文能力。",
+          "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
           "draft": false,
-          "additions": 316,
-          "deletions": 19,
-          "changed_files": 5,
-          "merge_commit_sha": "e331baaaa8167b7e6a1ed03c2e1c546f5345c92e",
-          "kind": "merged"
-        },
-        {
-          "number": 34871,
-          "title": "Glm52 a5 opt sync 20260814",
-          "author": "HEX1A0A",
-          "url": "https://github.com/sgl-project/sglang/pull/34871",
-          "time": "2026-08-15T10:54:20Z",
-          "categories": [
-            "Ascend / NPU",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 8004,
-          "deletions": 450,
-          "changed_files": 76,
-          "merge_commit_sha": "94daad003bab733f9e8033b0002406d4ece0f019",
-          "kind": "merged"
-        },
-        {
-          "number": 34937,
-          "title": "Fix Python packaging shadowing in DeepEP wheel builds",
-          "author": "Fridge003",
-          "url": "https://github.com/sgl-project/sglang/pull/34937",
-          "time": "2026-08-15T10:27:33Z",
-          "categories": [
-            "MoE"
-          ],
-          "analysis": "可能影响专家并行、token 路由、通信开销和 MoE 吞吐。",
-          "draft": false,
-          "additions": 3,
-          "deletions": 3,
-          "changed_files": 1,
-          "merge_commit_sha": "e161bd1265a0082478b7f1c09f224a52d315dc71",
-          "kind": "merged"
-        },
-        {
-          "number": 34811,
-          "title": "test: restore GLM-4.1V nightly latency threshold",
-          "author": "mickqian",
-          "url": "https://github.com/sgl-project/sglang/pull/34811",
-          "time": "2026-08-15T10:13:20Z",
-          "categories": [
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 1,
-          "deletions": 1,
-          "changed_files": 1,
-          "merge_commit_sha": "a64791b3129a69bda33debbc80dc9fa0cb02d99c",
-          "kind": "merged"
-        },
-        {
-          "number": 34892,
-          "title": "feat: add safeguards for remote media URLs",
-          "author": "mickqian",
-          "url": "https://github.com/sgl-project/sglang/pull/34892",
-          "time": "2026-08-15T10:12:16Z",
-          "categories": [
-            "Omni / Multimodal"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 453,
-          "deletions": 45,
-          "changed_files": 14,
-          "merge_commit_sha": "35cefd1c513f9179715947fe929b410852d8e503",
-          "kind": "merged"
-        },
-        {
-          "number": 34825,
-          "title": "[diffusion] Bound overlong weight lock filenames",
-          "author": "BBuf",
-          "url": "https://github.com/sgl-project/sglang/pull/34825",
-          "time": "2026-08-15T09:20:31Z",
-          "categories": [
-            "Kernel / Performance"
-          ],
-          "analysis": "包含 kernel 或性能优化，值得关注 benchmark 和硬件适配变化。",
-          "draft": false,
-          "additions": 30,
+          "additions": 65,
           "deletions": 1,
           "changed_files": 2,
-          "merge_commit_sha": "0c072235f44fce4b89e594c2d3348e4f48e774b8",
+          "merge_commit_sha": "f68517f644aacae16ff762a8e5d4bab1e2efacdf",
           "kind": "merged"
         },
         {
-          "number": 34914,
-          "title": "Update sgl-deep-ep release workflow for DeepEP v2",
-          "author": "Fridge003",
-          "url": "https://github.com/sgl-project/sglang/pull/34914",
-          "time": "2026-08-15T09:08:29Z",
-          "categories": [
-            "MoE",
-            "Distributed / Comm",
-            "Scheduler / Runtime",
-            "Omni / Multimodal"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 20,
-          "deletions": 13,
-          "changed_files": 2,
-          "merge_commit_sha": "8d44091326619559f4e53e8d220e78848b856301",
-          "kind": "merged"
-        },
-        {
-          "number": 34883,
-          "title": "[Kimi-K3] Use explicit SiTU activation for MegaMoE",
-          "author": "Fridge003",
-          "url": "https://github.com/sgl-project/sglang/pull/34883",
-          "time": "2026-08-15T08:42:00Z",
-          "categories": [
-            "Quantization",
-            "MoE"
-          ],
-          "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
-          "draft": false,
-          "additions": 68,
-          "deletions": 24,
-          "changed_files": 4,
-          "merge_commit_sha": "7769f54febc9e20d336fd3615ef99daf6148b5b0",
-          "kind": "merged"
-        },
-        {
-          "number": 34269,
-          "title": "config: state the bag contract as what resolution produced, and the skill rule that goes with it",
-          "author": "ch-wan",
-          "url": "https://github.com/sgl-project/sglang/pull/34269",
-          "time": "2026-08-15T07:40:38Z",
-          "categories": [
-            "Ascend / NPU",
-            "Attention / KV",
-            "Scheduler / Runtime"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 155,
-          "deletions": 11,
-          "changed_files": 2,
-          "merge_commit_sha": "c87a2ced121a4af3d7ec58d3e5ac2ec88cea7ed7",
-          "kind": "merged"
-        },
-        {
-          "number": 34267,
-          "title": "config: pin the supplied-instance surface that a raw record would change",
-          "author": "ch-wan",
-          "url": "https://github.com/sgl-project/sglang/pull/34267",
-          "time": "2026-08-15T07:40:08Z",
-          "categories": [
-            "Ascend / NPU",
-            "Attention / KV",
-            "Distributed / Comm",
-            "Omni / Multimodal"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 1269,
-          "deletions": 0,
-          "changed_files": 2,
-          "merge_commit_sha": "d804b6bd9851ef94d1e7a5cf7d66dac050f68c1d",
-          "kind": "merged"
-        },
-        {
-          "number": 34819,
-          "title": "config: the post-publish consumers of the supplied-instance surface read the bags",
-          "author": "ch-wan",
-          "url": "https://github.com/sgl-project/sglang/pull/34819",
-          "time": "2026-08-15T07:39:36Z",
-          "categories": [
-            "MoE",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能影响专家并行、token 路由、通信开销和 MoE 吞吐。",
-          "draft": false,
-          "additions": 57,
-          "deletions": 40,
-          "changed_files": 17,
-          "merge_commit_sha": "1ab713c334ad447de694527595a0e5e69bd30fa9",
-          "kind": "merged"
-        },
-        {
-          "number": 34266,
-          "title": "config: the alias form of the runner-side instance read",
-          "author": "ch-wan",
-          "url": "https://github.com/sgl-project/sglang/pull/34266",
-          "time": "2026-08-15T07:39:04Z",
-          "categories": [
-            "Ascend / NPU",
-            "MoE",
-            "Attention / KV",
-            "Scheduler / Runtime"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 319,
-          "deletions": 147,
-          "changed_files": 18,
-          "merge_commit_sha": "f2ab6e306b3dc29ad155a7a7d0cdf9ff86f19a77",
-          "kind": "merged"
-        },
-        {
-          "number": 34265,
-          "title": "config: a named entry point for the resolution pipeline, and the last dynamic config read",
-          "author": "ch-wan",
-          "url": "https://github.com/sgl-project/sglang/pull/34265",
-          "time": "2026-08-15T07:38:31Z",
-          "categories": [
-            "Ascend / NPU",
-            "MoE",
-            "Attention / KV"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 67,
-          "deletions": 40,
-          "changed_files": 4,
-          "merge_commit_sha": "61908870f699dacf8874f40841e8be0a60355c99",
-          "kind": "merged"
-        },
-        {
-          "number": 34264,
-          "title": "config: decisions keyed on the attention backend read the configured pair",
-          "author": "ch-wan",
-          "url": "https://github.com/sgl-project/sglang/pull/34264",
-          "time": "2026-08-15T07:38:00Z",
-          "categories": [
-            "MoE",
-            "Attention / KV",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能影响专家并行、token 路由、通信开销和 MoE 吞吐。",
-          "draft": false,
-          "additions": 586,
-          "deletions": 79,
-          "changed_files": 10,
-          "merge_commit_sha": "d13d5c03abea535cdecefeaa176dc2afc9880140",
-          "kind": "merged"
-        },
-        {
-          "number": 34263,
-          "title": "config: the last runner-side instance reads read the bags",
-          "author": "ch-wan",
-          "url": "https://github.com/sgl-project/sglang/pull/34263",
-          "time": "2026-08-15T07:37:07Z",
-          "categories": [
-            "Ascend / NPU",
-            "Attention / KV",
-            "Scheduler / Runtime"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 202,
-          "deletions": 44,
-          "changed_files": 16,
-          "merge_commit_sha": "97279980cf96ea63b09657571e4ade50fd8118cb",
-          "kind": "merged"
-        },
-        {
-          "number": 34376,
-          "title": "[Fix] Make the linear-attn kernel choice per-runner, and pin draft/target loader-hook parity",
-          "author": "ch-wan",
-          "url": "https://github.com/sgl-project/sglang/pull/34376",
-          "time": "2026-08-15T07:36:05Z",
-          "categories": [
-            "Ascend / NPU",
-            "MoE",
-            "Attention / KV",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 288,
-          "deletions": 130,
-          "changed_files": 10,
-          "merge_commit_sha": "ab810e40524c8489a9eb9c3cbcdb7ade1fa6b947",
-          "kind": "merged"
-        },
-        {
-          "number": 34517,
-          "title": "[AMD][Spec] Accelerate Qwen3.5 verification with grouped-head shared KV",
-          "author": "chuyeh",
-          "url": "https://github.com/sgl-project/sglang/pull/34517",
-          "time": "2026-08-15T07:15:53Z",
+          "number": 30808,
+          "title": "[AMD] [GLM5] Enable dense-MHA short-context prefill fallback on gfx950",
+          "author": "Raiden-Makoto",
+          "url": "https://github.com/sgl-project/sglang/pull/30808",
+          "time": "2026-08-16T02:30:15Z",
           "categories": [
             "Quantization",
             "MoE",
             "Attention / KV",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
-          "draft": false,
-          "additions": 314,
-          "deletions": 41,
-          "changed_files": 4,
-          "merge_commit_sha": "6cbfa791d699c889d28f1bf5a65b08331b601388",
-          "kind": "merged"
-        }
-      ],
-      "opened_prs": [
-        {
-          "number": 34983,
-          "title": "Refactor: Deprecate Prefill CP V1",
-          "author": "Fridge003",
-          "url": "https://github.com/sgl-project/sglang/pull/34983",
-          "time": "2026-08-16T01:18:46Z",
-          "categories": [
-            "Ascend / NPU",
-            "Quantization",
-            "MoE",
-            "Attention / KV",
-            "Distributed / Comm",
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": true,
-          "additions": 1304,
-          "deletions": 3540,
-          "changed_files": 100,
-          "merge_commit_sha": "84b2790214dfbd1d8b83490d907ab567299fdf35",
-          "kind": "opened"
-        },
-        {
-          "number": 34982,
-          "title": "[Fix] Delegate shared-read-ends declarations in wrapper attention backends",
-          "author": "hnyls2002",
-          "url": "https://github.com/sgl-project/sglang/pull/34982",
-          "time": "2026-08-15T23:24:23Z",
-          "categories": [
-            "Attention / KV",
-            "Scheduler / Runtime"
-          ],
-          "analysis": "可能影响 Attention/KV Cache 的时延、显存效率或长上下文能力。",
-          "draft": false,
-          "additions": 131,
-          "deletions": 162,
-          "changed_files": 11,
-          "merge_commit_sha": "4a6dc5aa6f08c8fa1b763c4ec5066ac7c2e7cc0f",
-          "kind": "opened"
-        },
-        {
-          "number": 34981,
-          "title": "Add a pre-weight-processing model loader hook",
-          "author": "windscope",
-          "url": "https://github.com/sgl-project/sglang/pull/34981",
-          "time": "2026-08-15T23:17:06Z",
-          "categories": [
-            "Quantization",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
-          "draft": true,
-          "additions": 90,
-          "deletions": 5,
-          "changed_files": 3,
-          "merge_commit_sha": "d5a97456dc9c22c8aea4f1c0546285656196c29d",
-          "kind": "opened"
-        },
-        {
-          "number": 34980,
-          "title": "[Diffusion] Native Hunyuan3D Paint and Delight models",
-          "author": "mickqian",
-          "url": "https://github.com/sgl-project/sglang/pull/34980",
-          "time": "2026-08-15T20:19:00Z",
-          "categories": [
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 2431,
-          "deletions": 1756,
-          "changed_files": 11,
-          "merge_commit_sha": "a35b990c5b51c60652677b5e242dd8c504e318e7",
-          "kind": "opened"
-        },
-        {
-          "number": 34979,
-          "title": "fix(dspark): support target-only trajectory scoring",
-          "author": "slevental",
-          "url": "https://github.com/sgl-project/sglang/pull/34979",
-          "time": "2026-08-15T20:15:14Z",
-          "categories": [
-            "Kernel / Performance"
-          ],
-          "analysis": "包含 kernel 或性能优化，值得关注 benchmark 和硬件适配变化。",
-          "draft": false,
-          "additions": 209,
-          "deletions": 8,
-          "changed_files": 6,
-          "merge_commit_sha": "399c716e614bd7181abf3bd0a0dce13f2499dbd6",
-          "kind": "opened"
-        },
-        {
-          "number": 34978,
-          "title": "[Diffusion] Fail MiniMax-H3 quality=\"high\" closed on substituted DiT weights",
-          "author": "Raymondlol",
-          "url": "https://github.com/sgl-project/sglang/pull/34978",
-          "time": "2026-08-15T20:03:05Z",
-          "categories": [
-            "Ascend / NPU",
-            "Quantization",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 32,
-          "deletions": 0,
-          "changed_files": 2,
-          "merge_commit_sha": "2770073e0dac255a127d71284b16b75cf9f33bd8",
-          "kind": "opened"
-        },
-        {
-          "number": 34977,
-          "title": "[PD] Add is_dummy truth-table wire tests for mooncake and nixl",
-          "author": "rishabhsinha17",
-          "url": "https://github.com/sgl-project/sglang/pull/34977",
-          "time": "2026-08-15T19:03:51Z",
-          "categories": [
-            "Ascend / NPU",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 159,
-          "deletions": 0,
-          "changed_files": 2,
-          "merge_commit_sha": "23583003064fc8eb053227d8cbc013405cfd45d3",
-          "kind": "opened"
-        },
-        {
-          "number": 34976,
-          "title": "Expose selected worker ID in SMG responses",
-          "author": "TonyLianLong",
-          "url": "https://github.com/sgl-project/sglang/pull/34976",
-          "time": "2026-08-15T18:56:24Z",
-          "categories": [
-            "Ascend / NPU",
-            "MoE",
-            "Distributed / Comm",
-            "Scheduler / Runtime"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 72,
-          "deletions": 2,
-          "changed_files": 3,
-          "merge_commit_sha": "6840604cec98ae97b5701ec8b123c4365140713d",
-          "kind": "opened"
-        },
-        {
-          "number": 34975,
-          "title": "fix(unified-cache): allow multiple concurrent load-back pins per node",
-          "author": "ffahleraz",
-          "url": "https://github.com/sgl-project/sglang/pull/34975",
-          "time": "2026-08-15T18:52:29Z",
-          "categories": [
-            "Ascend / NPU",
-            "Quantization",
-            "Scheduler / Runtime"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 105,
-          "deletions": 22,
-          "changed_files": 2,
-          "merge_commit_sha": "32f0438dabb935d6d9772aa6e9e782284dd82a85",
-          "kind": "opened"
-        },
-        {
-          "number": 34973,
-          "title": "[AMD] DSv4: fuse the qk-norm-rope pair on the MTP target-verify path",
-          "author": "karverma-amd",
-          "url": "https://github.com/sgl-project/sglang/pull/34973",
-          "time": "2026-08-15T18:37:59Z",
-          "categories": [
-            "Attention / KV",
-            "Distributed / Comm",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能影响 Attention/KV Cache 的时延、显存效率或长上下文能力。",
-          "draft": false,
-          "additions": 35,
-          "deletions": 3,
-          "changed_files": 2,
-          "merge_commit_sha": "cce4f8d76b4619d7c5180972cc6ce6149e3044ca",
-          "kind": "opened"
-        },
-        {
-          "number": 34971,
-          "title": "[Diffusion] Add native GLM-Image AR encoder",
-          "author": "mickqian",
-          "url": "https://github.com/sgl-project/sglang/pull/34971",
-          "time": "2026-08-15T18:12:16Z",
-          "categories": [
-            "MoE",
-            "Attention / KV",
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 1324,
-          "deletions": 26,
-          "changed_files": 7,
-          "merge_commit_sha": "210a7588c05c462bd373779dc2d6a16572367b36",
-          "kind": "opened"
-        },
-        {
-          "number": 34970,
-          "title": "[AMD][DI][CI] 9/N Add Qwen3.5-397B-A17B MXFP4 1P1D DI/CI recipes (base + MTP + DP8/EP8) — conflict resolved",
-          "author": "michaelzhang-ai",
-          "url": "https://github.com/sgl-project/sglang/pull/34970",
-          "time": "2026-08-15T18:02:55Z",
-          "categories": [
-            "Quantization",
-            "Distributed / Comm",
-            "Scheduler / Runtime"
-          ],
-          "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
-          "draft": false,
-          "additions": 376,
-          "deletions": 5,
-          "changed_files": 6,
-          "merge_commit_sha": "cb506021d42531ffa1f9bfc262a13e49ebfe4fe1",
-          "kind": "opened"
-        },
-        {
-          "number": 34968,
-          "title": "[Diffusion] Native Hunyuan3D image encoders",
-          "author": "mickqian",
-          "url": "https://github.com/sgl-project/sglang/pull/34968",
-          "time": "2026-08-15T17:31:14Z",
-          "categories": [
-            "Attention / KV",
-            "Distributed / Comm",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 883,
-          "deletions": 40,
-          "changed_files": 6,
-          "merge_commit_sha": "9fd839902198c68e4a723990d54fdcb31f4fa489",
-          "kind": "opened"
-        },
-        {
-          "number": 34967,
-          "title": "[MoE] Add FlashInfer SM90 MXFP4 W4A8 MoE",
-          "author": "yuan-luo",
-          "url": "https://github.com/sgl-project/sglang/pull/34967",
-          "time": "2026-08-15T17:11:34Z",
-          "categories": [
-            "Quantization",
-            "MoE",
             "Scheduler / Runtime",
             "Kernel / Performance"
           ],
           "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
           "draft": false,
-          "additions": 625,
-          "deletions": 67,
-          "changed_files": 9,
-          "merge_commit_sha": "f3f34b35b0e511763dbddea02bcdb80a1325f10c",
-          "kind": "opened"
-        },
-        {
-          "number": 34966,
-          "title": "Support compressed-tensors NVFP4 Marlin with BF16 and DSpark",
-          "author": "mochgolf",
-          "url": "https://github.com/sgl-project/sglang/pull/34966",
-          "time": "2026-08-15T16:39:56Z",
-          "categories": [
-            "Ascend / NPU",
-            "Quantization",
-            "Attention / KV",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 93,
-          "deletions": 19,
-          "changed_files": 6,
-          "merge_commit_sha": "82d19f7feac9171207956e2f147ac966bbe3bbd4",
-          "kind": "opened"
-        },
-        {
-          "number": 34965,
-          "title": "[Diffusion] Native Pi0.5 SigLIP vision tower",
-          "author": "mickqian",
-          "url": "https://github.com/sgl-project/sglang/pull/34965",
-          "time": "2026-08-15T16:34:36Z",
-          "categories": [
-            "Ascend / NPU",
-            "Attention / KV",
-            "Distributed / Comm",
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 412,
-          "deletions": 409,
-          "changed_files": 5,
-          "merge_commit_sha": "671e03578196d7edd816dbbd16f1b39a18d9153f",
-          "kind": "opened"
-        },
-        {
-          "number": 34964,
-          "title": "fix(sgl-kernel): preload CUDA runtime before loading common ops",
-          "author": "sclaibin",
-          "url": "https://github.com/sgl-project/sglang/pull/34964",
-          "time": "2026-08-15T16:26:04Z",
-          "categories": [
-            "Ascend / NPU",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 3,
-          "deletions": 3,
-          "changed_files": 1,
-          "merge_commit_sha": "7d8f873c34629ea1c54f10445edb4fd74921ff08",
-          "kind": "opened"
-        },
-        {
-          "number": 34963,
-          "title": "Fix dsv4 kl test timeout",
-          "author": "ispobock",
-          "url": "https://github.com/sgl-project/sglang/pull/34963",
-          "time": "2026-08-15T16:20:09Z",
-          "categories": [
-            "Ascend / NPU"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 2,
-          "deletions": 1,
+          "additions": 24,
+          "deletions": 4,
           "changed_files": 2,
-          "merge_commit_sha": "dd458f3212dd4ddf0e1a7907bbf539b660e70d21",
-          "kind": "opened"
-        },
-        {
-          "number": 34962,
-          "title": "[Quantization] Fix GPTQ scheme attachment broken by LinearBase.scheme default",
-          "author": "mmangkad",
-          "url": "https://github.com/sgl-project/sglang/pull/34962",
-          "time": "2026-08-15T16:02:23Z",
-          "categories": [
-            "Quantization",
-            "MoE",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
-          "draft": false,
-          "additions": 101,
-          "deletions": 7,
-          "changed_files": 5,
-          "merge_commit_sha": "0be0a775be5adec9c456d0c617b0ada08ebecad1",
-          "kind": "opened"
-        },
-        {
-          "number": 34961,
-          "title": "[CI] Pin the allowed_media_domains supplied-instance reads in the step-12 ratchet",
-          "author": "mmangkad",
-          "url": "https://github.com/sgl-project/sglang/pull/34961",
-          "time": "2026-08-15T15:57:57Z",
-          "categories": [
-            "Omni / Multimodal"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 2,
-          "deletions": 0,
-          "changed_files": 1,
-          "merge_commit_sha": "3802a725ac889c7e0ad45795c2550079a33c229b",
-          "kind": "opened"
-        },
-        {
-          "number": 34960,
-          "title": "[Diffusion] Native SANA-WM stage-2 refiner stack",
-          "author": "mickqian",
-          "url": "https://github.com/sgl-project/sglang/pull/34960",
-          "time": "2026-08-15T15:34:31Z",
-          "categories": [
-            "Distributed / Comm",
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 792,
-          "deletions": 960,
-          "changed_files": 19,
-          "merge_commit_sha": "dd392c9c8b60953e1e40fa05c141d635cb323db9",
-          "kind": "opened"
-        },
-        {
-          "number": 34958,
-          "title": "[KV Cache] Use exact page demand for paged prefill eviction",
-          "author": "fireandiceisler-del",
-          "url": "https://github.com/sgl-project/sglang/pull/34958",
-          "time": "2026-08-15T15:01:45Z",
-          "categories": [
-            "Attention / KV",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能影响 Attention/KV Cache 的时延、显存效率或长上下文能力。",
-          "draft": true,
-          "additions": 178,
-          "deletions": 3,
-          "changed_files": 2,
-          "merge_commit_sha": "359580107bdc0c0fac37370cad063a4dc91dd471",
-          "kind": "opened"
-        },
-        {
-          "number": 34957,
-          "title": "[Observability] Trace DP controller delivery stalls",
-          "author": "AMD-yanfeiwang",
-          "url": "https://github.com/sgl-project/sglang/pull/34957",
-          "time": "2026-08-15T14:33:43Z",
-          "categories": [
-            "MoE",
-            "Distributed / Comm",
-            "Scheduler / Runtime"
-          ],
-          "analysis": "可能影响专家并行、token 路由、通信开销和 MoE 吞吐。",
-          "draft": true,
-          "additions": 140,
-          "deletions": 23,
-          "changed_files": 6,
-          "merge_commit_sha": "4c98f92f0a6767c04f1a3a39862349a6b05ed4a8",
-          "kind": "opened"
-        },
-        {
-          "number": 34956,
-          "title": "[AMD] Fix ROCm FP8 DP gather quantization",
-          "author": "AMD-yanfeiwang",
-          "url": "https://github.com/sgl-project/sglang/pull/34956",
-          "time": "2026-08-15T14:33:38Z",
-          "categories": [
-            "Quantization",
-            "Distributed / Comm",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
-          "draft": true,
-          "additions": 66,
-          "deletions": 0,
-          "changed_files": 2,
-          "merge_commit_sha": "62fb85512432493a70a355d5761e8977051393c4",
-          "kind": "opened"
-        },
-        {
-          "number": 34955,
-          "title": "[Diffusion] Align MiniMax H3 request RNG with reference",
-          "author": "mickqian",
-          "url": "https://github.com/sgl-project/sglang/pull/34955",
-          "time": "2026-08-15T14:23:37Z",
-          "categories": [
-            "Ascend / NPU",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 405,
-          "deletions": 338,
-          "changed_files": 6,
-          "merge_commit_sha": "074f63c8ace0d98fca4e2d72afe7ef0d99370c9c",
-          "kind": "opened"
-        },
-        {
-          "number": 34953,
-          "title": "[Perf] Restore the 16-token router GEMM threshold on SM10X",
-          "author": "mmangkad",
-          "url": "https://github.com/sgl-project/sglang/pull/34953",
-          "time": "2026-08-15T14:01:25Z",
-          "categories": [
-            "Quantization",
-            "MoE",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
-          "draft": false,
-          "additions": 1,
-          "deletions": 3,
-          "changed_files": 1,
-          "merge_commit_sha": "7dcb2d26f487d194a73e9c5d9ebd412316c3c335",
-          "kind": "opened"
-        },
-        {
-          "number": 34952,
-          "title": "docs: define native diffusion model integration contract",
-          "author": "mickqian",
-          "url": "https://github.com/sgl-project/sglang/pull/34952",
-          "time": "2026-08-15T13:25:05Z",
-          "categories": [
-            "Distributed / Comm",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能影响多卡扩展效率、collective 通信或并行策略。",
-          "draft": false,
-          "additions": 32,
-          "deletions": 17,
-          "changed_files": 1,
-          "merge_commit_sha": "4beb157e872d69388a81ac8488d78b7809c09760",
-          "kind": "opened"
-        },
-        {
-          "number": 34951,
-          "title": "[Diffusion] Native ERNIE prompt enhancer",
-          "author": "mickqian",
-          "url": "https://github.com/sgl-project/sglang/pull/34951",
-          "time": "2026-08-15T13:06:09Z",
-          "categories": [
-            "Attention / KV",
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 336,
-          "deletions": 45,
-          "changed_files": 6,
-          "merge_commit_sha": "94c8057d061af21c20d165e9ea09f6db9363c1d7",
-          "kind": "opened"
-        },
-        {
-          "number": 34950,
-          "title": "[OpenAI] Preserve images in Responses tool outputs",
-          "author": "lgy1027",
-          "url": "https://github.com/sgl-project/sglang/pull/34950",
-          "time": "2026-08-15T12:25:39Z",
-          "categories": [
-            "Ascend / NPU",
-            "Omni / Multimodal"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 80,
-          "deletions": 3,
-          "changed_files": 2,
-          "merge_commit_sha": "615ec84ddee2266fd718fe64906b3eb8577a5516",
-          "kind": "opened"
+          "merge_commit_sha": "4c0e85524dc1eff80bf49baf2dea594862611f48",
+          "kind": "merged"
         },
         {
           "number": 34949,
           "title": "[Diffusion] Route MiniMax H3 VAE attention through native backends",
           "author": "mickqian",
           "url": "https://github.com/sgl-project/sglang/pull/34949",
-          "time": "2026-08-15T12:23:24Z",
+          "time": "2026-08-16T02:07:27Z",
           "categories": [
             "MoE",
             "Attention / KV",
@@ -2392,58 +410,74 @@
           "additions": 187,
           "deletions": 290,
           "changed_files": 10,
-          "merge_commit_sha": "584e00f518afec73fca5df894ab6f55771020a45",
-          "kind": "opened"
+          "merge_commit_sha": "d269a28b47e28c5f74f3baf3401f9a7d294298c2",
+          "kind": "merged"
         },
         {
-          "number": 34948,
-          "title": "[Fix][DSA] Fail loudly when trtllm-gen query rows exceed the CUDA gridDim.z limit instead of silently skipping attention",
-          "author": "zkyue",
-          "url": "https://github.com/sgl-project/sglang/pull/34948",
-          "time": "2026-08-15T12:16:23Z",
+          "number": 34980,
+          "title": "[Diffusion] Native Hunyuan3D Paint and Delight models",
+          "author": "mickqian",
+          "url": "https://github.com/sgl-project/sglang/pull/34980",
+          "time": "2026-08-16T02:03:48Z",
           "categories": [
-            "Ascend / NPU",
-            "Quantization",
-            "Attention / KV",
-            "Distributed / Comm",
             "Scheduler / Runtime",
+            "Omni / Multimodal",
             "Kernel / Performance"
           ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
+          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
           "draft": false,
-          "additions": 16,
-          "deletions": 0,
-          "changed_files": 1,
-          "merge_commit_sha": "8be47d10b2f6ae92184be8a16bcc0cc43a9e71b8",
-          "kind": "opened"
+          "additions": 2431,
+          "deletions": 1756,
+          "changed_files": 11,
+          "merge_commit_sha": "4f9da625478653ba9ee08d23d816b05db3c672f0",
+          "kind": "merged"
         },
         {
-          "number": 34946,
-          "title": "[KDA] Route Kimi-Linear through native Cake kernels",
-          "author": "yyihuang",
-          "url": "https://github.com/sgl-project/sglang/pull/34946",
-          "time": "2026-08-15T12:10:01Z",
+          "number": 34984,
+          "title": "[AMD] Make the Kimi-K3 MI35x nightly accuracy-only, and fix the lint blocker",
+          "author": "michaelzhang-ai",
+          "url": "https://github.com/sgl-project/sglang/pull/34984",
+          "time": "2026-08-16T02:01:55Z",
           "categories": [
             "Ascend / NPU",
             "MoE",
-            "Attention / KV",
-            "Scheduler / Runtime",
+            "Omni / Multimodal",
             "Kernel / Performance"
           ],
           "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
+          "draft": true,
+          "additions": 1,
+          "deletions": 208,
+          "changed_files": 4,
+          "merge_commit_sha": "c3265cab8a5253fc9c537b0daff0e3a28628a546",
+          "kind": "merged"
+        },
+        {
+          "number": 34951,
+          "title": "[Diffusion] Native ERNIE prompt enhancer",
+          "author": "mickqian",
+          "url": "https://github.com/sgl-project/sglang/pull/34951",
+          "time": "2026-08-16T01:59:51Z",
+          "categories": [
+            "Attention / KV",
+            "Scheduler / Runtime",
+            "Omni / Multimodal",
+            "Kernel / Performance"
+          ],
+          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
           "draft": false,
-          "additions": 7197,
-          "deletions": 116,
-          "changed_files": 37,
-          "merge_commit_sha": "da3460fa8deb62916d774c90137dfde5e914461c",
-          "kind": "opened"
+          "additions": 336,
+          "deletions": 45,
+          "changed_files": 6,
+          "merge_commit_sha": "d106e8b23af9245bb40fe15c433384803d42ac82",
+          "kind": "merged"
         },
         {
           "number": 34945,
           "title": "[Diffusion] Native Qwen3-VL vision encoder",
           "author": "mickqian",
           "url": "https://github.com/sgl-project/sglang/pull/34945",
-          "time": "2026-08-15T12:02:42Z",
+          "time": "2026-08-16T01:58:46Z",
           "categories": [
             "Distributed / Comm",
             "Omni / Multimodal",
@@ -2454,975 +488,204 @@
           "additions": 561,
           "deletions": 17,
           "changed_files": 5,
-          "merge_commit_sha": "ad464a1ad5d5f47fd2468c1e41ab3cf13a004a1e",
-          "kind": "opened"
+          "merge_commit_sha": "19e3bd63917e0b7788626df47fdbb37a656fdbcb",
+          "kind": "merged"
         },
         {
-          "number": 34944,
-          "title": "fix(dspark): preserve parity in folded NPU paths",
-          "author": "McZyWu",
-          "url": "https://github.com/sgl-project/sglang/pull/34944",
-          "time": "2026-08-15T11:54:20Z",
-          "categories": [
-            "Ascend / NPU",
-            "Distributed / Comm",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 1401,
-          "deletions": 69,
-          "changed_files": 9,
-          "merge_commit_sha": "ad6ec52d55c5b22310ccbbf36111ad042a11f87b",
-          "kind": "opened"
-        },
-        {
-          "number": 34940,
-          "title": "[Diffusion] Fix H3 swap PEFT SwiGLU lora_B halves when loading FFN Lora",
-          "author": "niehen6174",
-          "url": "https://github.com/sgl-project/sglang/pull/34940",
-          "time": "2026-08-15T10:41:41Z",
-          "categories": [
-            "Ascend / NPU",
-            "Attention / KV",
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 17,
-          "deletions": 0,
-          "changed_files": 1,
-          "merge_commit_sha": "a1915f81844c75254847314fde005f9f74998fba",
-          "kind": "opened"
-        },
-        {
-          "number": 34939,
-          "title": "feat: support return_logprob under DSPARK speculative decoding",
-          "author": "alphabetc1",
-          "url": "https://github.com/sgl-project/sglang/pull/34939",
-          "time": "2026-08-15T10:32:17Z",
-          "categories": [
-            "Ascend / NPU",
-            "Scheduler / Runtime"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 113,
-          "deletions": 27,
-          "changed_files": 6,
-          "merge_commit_sha": "4e7e8ec9e64f6bbe45de2dd782891c2f92ff1932",
-          "kind": "opened"
-        },
-        {
-          "number": 34938,
-          "title": "perf: overlap Qwen shared expert with DeepEP routed experts",
-          "author": "YAMY1234",
-          "url": "https://github.com/sgl-project/sglang/pull/34938",
-          "time": "2026-08-15T10:31:01Z",
-          "categories": [
-            "Quantization",
-            "MoE",
-            "Attention / KV",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
-          "draft": true,
-          "additions": 30,
-          "deletions": 0,
-          "changed_files": 3,
-          "merge_commit_sha": "880cfc9162c7e0b8f67787093822242c7a4766ee",
-          "kind": "opened"
-        },
-        {
-          "number": 34937,
-          "title": "Fix Python packaging shadowing in DeepEP wheel builds",
-          "author": "Fridge003",
-          "url": "https://github.com/sgl-project/sglang/pull/34937",
-          "time": "2026-08-15T10:22:14Z",
-          "categories": [
-            "MoE"
-          ],
-          "analysis": "可能影响专家并行、token 路由、通信开销和 MoE 吞吐。",
-          "draft": false,
-          "additions": 3,
-          "deletions": 3,
-          "changed_files": 1,
-          "merge_commit_sha": "e161bd1265a0082478b7f1c09f224a52d315dc71",
-          "kind": "opened"
-        },
-        {
-          "number": 34936,
-          "title": "[NPU] [FIX] Fix non-contiguous parameter issue in FIA operator",
-          "author": "silencejade",
-          "url": "https://github.com/sgl-project/sglang/pull/34936",
-          "time": "2026-08-15T10:20:01Z",
-          "categories": [
-            "Ascend / NPU",
-            "Attention / KV",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 3,
-          "deletions": 3,
-          "changed_files": 1,
-          "merge_commit_sha": "a0eabffcccbc0e5afed0b60c9d267749d3e0ff26",
-          "kind": "opened"
-        },
-        {
-          "number": 34935,
-          "title": "[NPU]Ensure tensors allocated by empty_like are contiguous",
-          "author": "Estrella-xx",
-          "url": "https://github.com/sgl-project/sglang/pull/34935",
-          "time": "2026-08-15T09:49:05Z",
-          "categories": [
-            "Ascend / NPU",
-            "Attention / KV",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 6,
-          "deletions": 2,
-          "changed_files": 1,
-          "merge_commit_sha": "3a6481977f29080deaf044a7c44d245749691773",
-          "kind": "opened"
-        },
-        {
-          "number": 34934,
-          "title": "[Perf] Fuse prefill norm/act quantization for NVFP4 W4A4 hybrid models (Qwen3.5 family)",
-          "author": "BBuf",
-          "url": "https://github.com/sgl-project/sglang/pull/34934",
-          "time": "2026-08-15T09:45:33Z",
-          "categories": [
-            "Ascend / NPU",
-            "Quantization",
-            "MoE",
-            "Attention / KV",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 249,
-          "deletions": 2,
-          "changed_files": 4,
-          "merge_commit_sha": "56e86db7923a2d8402e0d05354d043136ce18836",
-          "kind": "opened"
-        },
-        {
-          "number": 34933,
-          "title": "[diffusion] Per-shard LoRA adapters on fused linear layers",
-          "author": "zhihengy",
-          "url": "https://github.com/sgl-project/sglang/pull/34933",
-          "time": "2026-08-15T09:43:00Z",
-          "categories": [
-            "Ascend / NPU",
-            "Distributed / Comm",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 607,
-          "deletions": 46,
-          "changed_files": 6,
-          "merge_commit_sha": "93bd71d72f12608c072a141989eaeb54742e63b0",
-          "kind": "opened"
-        },
-        {
-          "number": 34932,
-          "title": "[diffusion] Accelerate Cosmos3 T2I QKNorm+RoPE",
-          "author": "BBuf",
-          "url": "https://github.com/sgl-project/sglang/pull/34932",
-          "time": "2026-08-15T09:35:57Z",
-          "categories": [
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 135,
-          "deletions": 2,
-          "changed_files": 3,
-          "merge_commit_sha": "e561dc0471b3061aa9b5c43a8bdd5348ec8cabda",
-          "kind": "opened"
-        },
-        {
-          "number": 34931,
-          "title": "[diffusion] Accelerate lossless Ideogram norm post-processing",
-          "author": "BBuf",
-          "url": "https://github.com/sgl-project/sglang/pull/34931",
-          "time": "2026-08-15T09:35:52Z",
-          "categories": [
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能改变请求调度、batching、执行流水或推理时延。",
-          "draft": false,
-          "additions": 47,
-          "deletions": 1,
-          "changed_files": 2,
-          "merge_commit_sha": "c68336ccaf198cf97d3754d072de74e4ccd22557",
-          "kind": "opened"
-        },
-        {
-          "number": 34930,
-          "title": "[diffusion] Reuse bit-exact modulation fast path for LTX-2.3",
-          "author": "BBuf",
-          "url": "https://github.com/sgl-project/sglang/pull/34930",
-          "time": "2026-08-15T09:35:48Z",
-          "categories": [
-            "MoE",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 27,
-          "deletions": 2,
-          "changed_files": 2,
-          "merge_commit_sha": "eb515a365c7fd143d659147f89ad3d08bcb28776",
-          "kind": "opened"
-        },
-        {
-          "number": 34929,
-          "title": "[diffusion] Enable breakable CUDA graphs for LTX-2.3",
-          "author": "BBuf",
-          "url": "https://github.com/sgl-project/sglang/pull/34929",
-          "time": "2026-08-15T09:35:45Z",
-          "categories": [
-            "MoE",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能影响专家并行、token 路由、通信开销和 MoE 吞吐。",
-          "draft": false,
-          "additions": 159,
-          "deletions": 22,
-          "changed_files": 4,
-          "merge_commit_sha": "84d5b03af6e65619148bb9700f101f94b2dceff9",
-          "kind": "opened"
-        },
-        {
-          "number": 34928,
-          "title": "[diffusion][kernel] Accelerate Sana BCG with bit-exact conv post-processing",
-          "author": "BBuf",
-          "url": "https://github.com/sgl-project/sglang/pull/34928",
-          "time": "2026-08-15T09:35:42Z",
+          "number": 34896,
+          "title": "[Diffusion] Use native Qwen2.5-VL generation",
+          "author": "mickqian",
+          "url": "https://github.com/sgl-project/sglang/pull/34896",
+          "time": "2026-08-16T01:57:39Z",
           "categories": [
             "Attention / KV",
-            "Kernel / Performance"
-          ],
-          "analysis": "可能影响 Attention/KV Cache 的时延、显存效率或长上下文能力。",
-          "draft": false,
-          "additions": 296,
-          "deletions": 8,
-          "changed_files": 3,
-          "merge_commit_sha": "3e64a9f20a076f996107745dc6fb74afb908918a",
-          "kind": "opened"
-        },
-        {
-          "number": 34926,
-          "title": "Clean deprecated DeepSeek V4 Environs",
-          "author": "Fridge003",
-          "url": "https://github.com/sgl-project/sglang/pull/34926",
-          "time": "2026-08-15T09:05:48Z",
-          "categories": [
-            "Kernel / Performance"
-          ],
-          "analysis": "包含 kernel 或性能优化，值得关注 benchmark 和硬件适配变化。",
-          "draft": false,
-          "additions": 190,
-          "deletions": 674,
-          "changed_files": 29,
-          "merge_commit_sha": "caaf1596efe9030fb284419dd5a6e58f134a244a",
-          "kind": "opened"
-        },
-        {
-          "number": 34925,
-          "title": "fix: Step3Detector streaming drops tool calls and grafts parameters",
-          "author": "DavinZhang",
-          "url": "https://github.com/sgl-project/sglang/pull/34925",
-          "time": "2026-08-15T09:02:38Z",
-          "categories": [
-            "Ascend / NPU",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 471,
-          "deletions": 90,
-          "changed_files": 2,
-          "merge_commit_sha": "fcd76dd70381c9396f06cc000b12ce13906e153c",
-          "kind": "opened"
-        },
-        {
-          "number": 34924,
-          "title": "[Spec] Fix SWA eviction bookkeeping for DFLASH-family decode",
-          "author": "Liu-Steve",
-          "url": "https://github.com/sgl-project/sglang/pull/34924",
-          "time": "2026-08-15T08:52:47Z",
-          "categories": [
-            "Ascend / NPU",
-            "MoE",
-            "Attention / KV",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 2,
-          "deletions": 0,
-          "changed_files": 1,
-          "merge_commit_sha": "67174115c3d72611bdbace004aed9e8879a644a4",
-          "kind": "opened"
-        },
-        {
-          "number": 34923,
-          "title": "Apply latest DeepEP branch",
-          "author": "Fridge003",
-          "url": "https://github.com/sgl-project/sglang/pull/34923",
-          "time": "2026-08-15T08:31:03Z",
-          "categories": [
-            "Ascend / NPU",
-            "Quantization",
-            "MoE",
             "Distributed / Comm",
             "Omni / Multimodal",
             "Kernel / Performance"
           ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": true,
-          "additions": 118,
-          "deletions": 0,
-          "changed_files": 4,
-          "merge_commit_sha": "05a3519497516003c8dc1b7bab0ef7e62c3ef859",
-          "kind": "opened"
-        },
-        {
-          "number": 34922,
-          "title": "[MiniMax-M3] Use MSA for prefill index score",
-          "author": "rogeryoungh",
-          "url": "https://github.com/sgl-project/sglang/pull/34922",
-          "time": "2026-08-15T08:27:53Z",
-          "categories": [
-            "Ascend / NPU",
-            "Quantization",
-            "MoE",
-            "Distributed / Comm",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": true,
-          "additions": 1281,
-          "deletions": 432,
-          "changed_files": 18,
-          "merge_commit_sha": "436862889e9cafd769f01017b9e6e930db225a9b",
-          "kind": "opened"
-        },
-        {
-          "number": 34921,
-          "title": "Suppress expected FlashInfer TRT-LLM workspace warnings",
-          "author": "mmangkad",
-          "url": "https://github.com/sgl-project/sglang/pull/34921",
-          "time": "2026-08-15T08:00:15Z",
-          "categories": [
-            "Ascend / NPU",
-            "Distributed / Comm",
-            "Scheduler / Runtime",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 123,
-          "deletions": 12,
-          "changed_files": 2,
-          "merge_commit_sha": "e1b4dd8ca93bb3b8b614d35132286c99245a45c8",
-          "kind": "opened"
-        },
-        {
-          "number": 34919,
-          "title": "Fix DSpark CUDA graph replay with MegaMoE TP attention",
-          "author": "BJWang-ant",
-          "url": "https://github.com/sgl-project/sglang/pull/34919",
-          "time": "2026-08-15T07:54:49Z",
-          "categories": [
-            "Ascend / NPU",
-            "MoE",
-            "Attention / KV",
-            "Distributed / Comm",
-            "Scheduler / Runtime"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 20,
-          "deletions": 12,
-          "changed_files": 2,
-          "merge_commit_sha": null,
-          "kind": "opened"
-        }
-      ],
-      "commits": [],
-      "stats": {
-        "merged": 28,
-        "opened": 54,
-        "commits": 0
-      }
-    },
-    "sgl-project/sglang-omni": {
-      "merged_prs": [
-        {
-          "number": 1532,
-          "title": "[Bug][Qwen3-Omni] Restore deferred CUDA graph args on bootstrap failure",
-          "author": "charliechenye",
-          "url": "https://github.com/sgl-project/sglang-omni/pull/1532",
-          "time": "2026-08-16T00:42:30Z",
-          "categories": [
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
           "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
           "draft": false,
-          "additions": 69,
-          "deletions": 17,
-          "changed_files": 2,
-          "merge_commit_sha": "573ce7963fa7b95596459957a195c87cf60cda19",
-          "kind": "merged"
-        },
-        {
-          "number": 1537,
-          "title": "[Bug][Qwen3-Omni] Harden cached eager multimodal cursors ",
-          "author": "charliechenye",
-          "url": "https://github.com/sgl-project/sglang-omni/pull/1537",
-          "time": "2026-08-16T00:39:13Z",
-          "categories": [
-            "Scheduler / Runtime",
-            "Omni / Multimodal"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 306,
-          "deletions": 99,
-          "changed_files": 4,
-          "merge_commit_sha": "07ad37d7cf0fe6110b960393adce1bcdfce67b11",
-          "kind": "merged"
-        },
-        {
-          "number": 1237,
-          "title": "[Qwen3-Omni Perf] Chunk-aligned Code2Wav dispatch with batched CUDA graph capture",
-          "author": "dyyfk",
-          "url": "https://github.com/sgl-project/sglang-omni/pull/1237",
-          "time": "2026-08-16T00:28:17Z",
-          "categories": [
-            "MoE",
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 1413,
-          "deletions": 155,
-          "changed_files": 5,
-          "merge_commit_sha": "4c904d24866de0621edc6268d8aa2a07cd6418fb",
-          "kind": "merged"
-        },
-        {
-          "number": 1429,
-          "title": "[ASR Refactor][A-PR2] ARK-ASR: pre-lm encoder",
-          "author": "AkazaAkane",
-          "url": "https://github.com/sgl-project/sglang-omni/pull/1429",
-          "time": "2026-08-15T23:59:01Z",
-          "categories": [
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 1865,
-          "deletions": 33,
-          "changed_files": 19,
-          "merge_commit_sha": "db869bfe64f7cfe9e1e258b4f4288e0dc12d5663",
-          "kind": "merged"
-        },
-        {
-          "number": 1560,
-          "title": "[CI] Recalibrate MOSS-TD short-audio speed thresholds",
-          "author": "PrinsYin",
-          "url": "https://github.com/sgl-project/sglang-omni/pull/1560",
-          "time": "2026-08-15T22:39:15Z",
-          "categories": [
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 34,
-          "deletions": 34,
-          "changed_files": 2,
-          "merge_commit_sha": "8ced63dfe3b7023686f4044e89e4afc5a0424168",
-          "kind": "merged"
-        },
-        {
-          "number": 1550,
-          "title": "[Perf] Enable decoder compile and tiny prefill graphs for MOSS-TD",
-          "author": "SandyLuXY",
-          "url": "https://github.com/sgl-project/sglang-omni/pull/1550",
-          "time": "2026-08-15T21:39:03Z",
-          "categories": [
-            "Ascend / NPU",
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 165,
-          "deletions": 5,
-          "changed_files": 7,
-          "merge_commit_sha": "5afafc1433ef84dddc75c80226b798e810bf40ef",
-          "kind": "merged"
-        },
-        {
-          "number": 1561,
-          "title": "[CI]: Update Qwen3-ASR CI speed thresholds",
-          "author": "Ratish1",
-          "url": "https://github.com/sgl-project/sglang-omni/pull/1561",
-          "time": "2026-08-15T21:09:28Z",
-          "categories": [
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 25,
-          "deletions": 25,
-          "changed_files": 2,
-          "merge_commit_sha": "847a727f70a80ab2700ca507aed3ddfbfc320eb0",
-          "kind": "merged"
-        },
-        {
-          "number": 1524,
-          "title": "[Perf] transcription: soundfile fast path for the audio duration probe",
-          "author": "Ratish1",
-          "url": "https://github.com/sgl-project/sglang-omni/pull/1524",
-          "time": "2026-08-15T19:13:47Z",
-          "categories": [
-            "Ascend / NPU",
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 167,
-          "deletions": 7,
-          "changed_files": 4,
-          "merge_commit_sha": "70c45404f3828dc98d4d5e3f1fc72f1d100ebaf6",
-          "kind": "merged"
-        },
-        {
-          "number": 1551,
-          "title": "[Refactor][MOSS-TTS] Consolidate the audio tokenizer runtime",
-          "author": "CloudRipple",
-          "url": "https://github.com/sgl-project/sglang-omni/pull/1551",
-          "time": "2026-08-15T15:48:51Z",
-          "categories": [
-            "Ascend / NPU",
-            "Attention / KV",
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 980,
-          "deletions": 991,
-          "changed_files": 6,
-          "merge_commit_sha": "2d2ff5056f8c321f1dbc2ff6584baf05996ce150",
+          "additions": 1010,
+          "deletions": 116,
+          "changed_files": 16,
+          "merge_commit_sha": "eb6b773149d20c9707e4b79922ddb170eb53456a",
           "kind": "merged"
         }
       ],
       "opened_prs": [
         {
-          "number": 1567,
-          "title": "[Qwen3-Omni Perf] Overlap Code2Wav output materialization with vocoder launches",
-          "author": "EdwardZhang1108",
-          "url": "https://github.com/sgl-project/sglang-omni/pull/1567",
-          "time": "2026-08-16T00:11:59Z",
+          "number": 34989,
+          "title": "[diffusion] test: tighten NVIDIA perf baselines",
+          "author": "mickqian",
+          "url": "https://github.com/sgl-project/sglang/pull/34989",
+          "time": "2026-08-16T03:35:38Z",
+          "categories": [
+            "Omni / Multimodal",
+            "Kernel / Performance"
+          ],
+          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
+          "draft": true,
+          "additions": 3,
+          "deletions": 0,
+          "changed_files": 3,
+          "merge_commit_sha": "716c4525d48ae75f2943d135f485137244e06b81",
+          "kind": "opened"
+        },
+        {
+          "number": 34988,
+          "title": "[Diffusion] Reuse SRT SigLIP vision model",
+          "author": "mickqian",
+          "url": "https://github.com/sgl-project/sglang/pull/34988",
+          "time": "2026-08-16T03:31:57Z",
           "categories": [
             "Ascend / NPU",
+            "Attention / KV",
+            "Distributed / Comm",
             "Scheduler / Runtime",
-            "Omni / Multimodal",
             "Kernel / Performance"
           ],
           "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
           "draft": false,
-          "additions": 855,
-          "deletions": 7,
+          "additions": 147,
+          "deletions": 268,
           "changed_files": 5,
-          "merge_commit_sha": "832359142e04a4e344b8535f48fd1728b4045677",
+          "merge_commit_sha": "85ff273df25eaa03a067c5b9b27ecd8a89c914c4",
           "kind": "opened"
         },
         {
-          "number": 1566,
-          "title": "[Perf][Whisper ASR] Opt-in torch.compile for the Whisper ASR encoder on top of encoder CUDA graphs",
-          "author": "lijrjyan",
-          "url": "https://github.com/sgl-project/sglang-omni/pull/1566",
-          "time": "2026-08-15T23:48:44Z",
+          "number": 34987,
+          "title": "[multimodal] Bound tokenizer-side GPU memory in Kimi GPU image preprocessing",
+          "author": "chromecast56",
+          "url": "https://github.com/sgl-project/sglang/pull/34987",
+          "time": "2026-08-16T02:20:27Z",
           "categories": [
-            "Attention / KV",
             "Scheduler / Runtime",
             "Omni / Multimodal",
             "Kernel / Performance"
           ],
           "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
           "draft": false,
-          "additions": 287,
-          "deletions": 4,
+          "additions": 497,
+          "deletions": 45,
           "changed_files": 8,
-          "merge_commit_sha": "b45c00ed441db599e44a5b6b70cd8fb8842275b7",
+          "merge_commit_sha": "a07818b9eab08d1c3942a109059c7b51b3e2825c",
           "kind": "opened"
         },
         {
-          "number": 1565,
-          "title": "[Qwen3-Omni Perf] Coordinator: opt-in minimum-gap admission gate",
-          "author": "Peter-Nie2003",
-          "url": "https://github.com/sgl-project/sglang-omni/pull/1565",
-          "time": "2026-08-15T22:15:25Z",
+          "number": 34986,
+          "title": "[diffusion] feat: support MiniMax-H3 text encoder FP8 quantization",
+          "author": "mickqian",
+          "url": "https://github.com/sgl-project/sglang/pull/34986",
+          "time": "2026-08-16T02:09:59Z",
           "categories": [
-            "Ascend / NPU",
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
+            "Quantization",
             "Kernel / Performance"
           ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 85,
-          "deletions": 0,
-          "changed_files": 6,
-          "merge_commit_sha": "34e60f30f9e8512112e1857cf178011deb51a7ca",
-          "kind": "opened"
-        },
-        {
-          "number": 1564,
-          "title": "[Qwen3-Omni Perf] Preprocessing: concurrent dispatch, plus a tunable encoder micro-batch wait",
-          "author": "Peter-Nie2003",
-          "url": "https://github.com/sgl-project/sglang-omni/pull/1564",
-          "time": "2026-08-15T21:25:58Z",
-          "categories": [
-            "MoE",
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 25,
-          "deletions": 3,
-          "changed_files": 1,
-          "merge_commit_sha": "ffcc8fb5f51ccf81888750d4bad1d7af71761692",
-          "kind": "opened"
-        },
-        {
-          "number": 1563,
-          "title": "[Qwen3-Omni Perf] Talker: mixed-chunk by default, plus an opt-in prefill/decode interleave",
-          "author": "Peter-Nie2003",
-          "url": "https://github.com/sgl-project/sglang-omni/pull/1563",
-          "time": "2026-08-15T21:05:20Z",
-          "categories": [
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 248,
-          "deletions": 0,
-          "changed_files": 8,
-          "merge_commit_sha": "f7204c6765621295d55583fc89cc5352716bdbd9",
-          "kind": "opened"
-        },
-        {
-          "number": 1562,
-          "title": "[ASR Feature] Real Whisper segment timestamps via prompt-primed timestamp decoding",
-          "author": "lijrjyan",
-          "url": "https://github.com/sgl-project/sglang-omni/pull/1562",
-          "time": "2026-08-15T20:25:07Z",
-          "categories": [
-            "MoE",
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 541,
-          "deletions": 36,
-          "changed_files": 16,
-          "merge_commit_sha": "d7f88b9ad5b34eed12d9a2c75972167a0a527634",
-          "kind": "opened"
-        },
-        {
-          "number": 1561,
-          "title": "[CI]: Update Qwen3-ASR CI speed thresholds",
-          "author": "Ratish1",
-          "url": "https://github.com/sgl-project/sglang-omni/pull/1561",
-          "time": "2026-08-15T19:57:30Z",
-          "categories": [
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 25,
-          "deletions": 25,
-          "changed_files": 2,
-          "merge_commit_sha": "847a727f70a80ab2700ca507aed3ddfbfc320eb0",
-          "kind": "opened"
-        },
-        {
-          "number": 1560,
-          "title": "[CI] Recalibrate MOSS-TD short-audio speed thresholds",
-          "author": "PrinsYin",
-          "url": "https://github.com/sgl-project/sglang-omni/pull/1560",
-          "time": "2026-08-15T18:10:36Z",
-          "categories": [
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": false,
-          "additions": 34,
-          "deletions": 34,
-          "changed_files": 2,
-          "merge_commit_sha": "8ced63dfe3b7023686f4044e89e4afc5a0424168",
-          "kind": "opened"
-        },
-        {
-          "number": 1559,
-          "title": "[Model] Fix MiniMax Music 3 loading and BF16 rotary precision",
-          "author": "Ratish1",
-          "url": "https://github.com/sgl-project/sglang-omni/pull/1559",
-          "time": "2026-08-15T18:05:27Z",
-          "categories": [
-            "Ascend / NPU",
-            "Attention / KV",
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
+          "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
           "draft": true,
-          "additions": 406,
-          "deletions": 80,
-          "changed_files": 9,
-          "merge_commit_sha": "f1a14c9d50fc86a23288c3975dd4ba90d76270f8",
-          "kind": "opened"
-        },
-        {
-          "number": 1558,
-          "title": "fix(audio): preserve stereo in non-streaming encoded outputs",
-          "author": "charliechenye",
-          "url": "https://github.com/sgl-project/sglang-omni/pull/1558",
-          "time": "2026-08-15T17:55:56Z",
-          "categories": [
-            "Ascend / NPU",
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 202,
-          "deletions": 11,
-          "changed_files": 2,
-          "merge_commit_sha": "02969bb3d2da4162f387c3266b3d5426132b0495",
-          "kind": "opened"
-        },
-        {
-          "number": 1557,
-          "title": "[Fix] weight-share stage IPC reductions",
-          "author": "AkazaAkane",
-          "url": "https://github.com/sgl-project/sglang-omni/pull/1557",
-          "time": "2026-08-15T17:35:33Z",
-          "categories": [
-            "Ascend / NPU",
-            "Distributed / Comm"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 80,
-          "deletions": 0,
-          "changed_files": 4,
-          "merge_commit_sha": "9920af6ddfa168b2b3480bb9d706897a01e9236e",
-          "kind": "opened"
-        },
-        {
-          "number": 1556,
-          "title": "[Fix] qwen3_tts: rebuild embeds on KV retraction ",
-          "author": "0xtoward",
-          "url": "https://github.com/sgl-project/sglang-omni/pull/1556",
-          "time": "2026-08-15T17:15:51Z",
-          "categories": [
-            "Omni / Multimodal"
-          ],
-          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
-          "draft": true,
-          "additions": 56,
+          "additions": 374,
           "deletions": 5,
-          "changed_files": 2,
-          "merge_commit_sha": "f5dbd60a89ee3ad3ce997057a4bac8e8bed853d5",
+          "changed_files": 11,
+          "merge_commit_sha": null,
           "kind": "opened"
         },
         {
-          "number": 1554,
-          "title": "[Perf][Qwen3-TTS] wire prefill admission coalescing through the build…",
-          "author": "DerekSun02",
-          "url": "https://github.com/sgl-project/sglang-omni/pull/1554",
-          "time": "2026-08-15T16:09:08Z",
+          "number": 34985,
+          "title": "[AMD] Add the Kimi-K3 MI35x perf sweep inside the accuracy job",
+          "author": "michaelzhang-ai",
+          "url": "https://github.com/sgl-project/sglang/pull/34985",
+          "time": "2026-08-16T01:49:34Z",
           "categories": [
             "Ascend / NPU",
-            "Scheduler / Runtime",
+            "Quantization",
+            "MoE",
+            "Kernel / Performance"
+          ],
+          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
+          "draft": true,
+          "additions": 181,
+          "deletions": 0,
+          "changed_files": 3,
+          "merge_commit_sha": "bf1bc2007f54cf014941ac88fe799a98e2d8242d",
+          "kind": "opened"
+        },
+        {
+          "number": 34984,
+          "title": "[AMD] Make the Kimi-K3 MI35x nightly accuracy-only, and fix the lint blocker",
+          "author": "michaelzhang-ai",
+          "url": "https://github.com/sgl-project/sglang/pull/34984",
+          "time": "2026-08-16T01:46:28Z",
+          "categories": [
+            "Ascend / NPU",
+            "MoE",
             "Omni / Multimodal",
             "Kernel / Performance"
           ],
           "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
           "draft": true,
-          "additions": 137,
-          "deletions": 4,
-          "changed_files": 6,
-          "merge_commit_sha": "312e0ca9decdf77ba06cfa66ba61c60a70cc1176",
-          "kind": "opened"
-        },
-        {
-          "number": 1553,
-          "title": "[Whisper ASR] Enable async decode by default",
-          "author": "Dayuxiaoshui",
-          "url": "https://github.com/sgl-project/sglang-omni/pull/1553",
-          "time": "2026-08-15T13:29:04Z",
-          "categories": [
-            "Ascend / NPU",
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 204,
-          "deletions": 28,
-          "changed_files": 7,
-          "merge_commit_sha": "1960a778ecb2715fcc90431e15c04f606a899a04",
-          "kind": "opened"
-        },
-        {
-          "number": 1552,
-          "title": "[Model] Support SenseNova U1 (NEOChatModel, MoT interleaved understanding+generation)",
-          "author": "waltstephen",
-          "url": "https://github.com/sgl-project/sglang-omni/pull/1552",
-          "time": "2026-08-15T10:41:35Z",
-          "categories": [
-            "Ascend / NPU",
-            "Attention / KV",
-            "Scheduler / Runtime",
-            "Omni / Multimodal",
-            "Kernel / Performance"
-          ],
-          "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-          "draft": false,
-          "additions": 11332,
-          "deletions": 1,
-          "changed_files": 27,
-          "merge_commit_sha": "ef31bca73588c938a832036b5719c3bcef483081",
+          "additions": 1,
+          "deletions": 208,
+          "changed_files": 4,
+          "merge_commit_sha": "c3265cab8a5253fc9c537b0daff0e3a28628a546",
           "kind": "opened"
         }
       ],
       "commits": [],
       "stats": {
-        "merged": 9,
-        "opened": 15,
+        "merged": 11,
+        "opened": 6,
+        "commits": 0
+      }
+    },
+    "sgl-project/sglang-omni": {
+      "merged_prs": [],
+      "opened_prs": [
+        {
+          "number": 1568,
+          "title": "Issue#1401 bug fixed",
+          "author": "lzwnoname",
+          "url": "https://github.com/sgl-project/sglang-omni/pull/1568",
+          "time": "2026-08-16T03:12:51Z",
+          "categories": [
+            "MoE",
+            "Omni / Multimodal",
+            "Kernel / Performance"
+          ],
+          "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
+          "draft": false,
+          "additions": 216,
+          "deletions": 0,
+          "changed_files": 2,
+          "merge_commit_sha": "e7b55d18c2d4025455b31ad3b83acbac46d6fce6",
+          "kind": "opened"
+        }
+      ],
+      "commits": [],
+      "stats": {
+        "merged": 0,
+        "opened": 1,
         "commits": 0
       }
     }
   },
   "category_counts": {
-    "Kernel / Performance": 104,
-    "Scheduler / Runtime": 102,
-    "Ascend / NPU": 79,
-    "Omni / Multimodal": 54,
-    "Attention / KV": 50,
-    "MoE": 49,
-    "Quantization": 36,
-    "Distributed / Comm": 36,
-    "Other": 9
+    "Kernel / Performance": 22,
+    "Scheduler / Runtime": 17,
+    "Omni / Multimodal": 14,
+    "Ascend / NPU": 11,
+    "Distributed / Comm": 11,
+    "Quantization": 11,
+    "MoE": 10,
+    "Attention / KV": 9,
+    "Other": 1
   },
   "focus_items": [
     {
-      "number": 34983,
-      "title": "Refactor: Deprecate Prefill CP V1",
-      "author": "Fridge003",
-      "url": "https://github.com/sgl-project/sglang/pull/34983",
-      "time": "2026-08-16T01:18:46Z",
-      "categories": [
-        "Ascend / NPU",
-        "Quantization",
-        "MoE",
-        "Attention / KV",
-        "Distributed / Comm",
-        "Scheduler / Runtime",
-        "Omni / Multimodal",
-        "Kernel / Performance"
-      ],
-      "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-      "draft": true,
-      "additions": 1304,
-      "deletions": 3540,
-      "changed_files": 100,
-      "merge_commit_sha": "84b2790214dfbd1d8b83490d907ab567299fdf35",
-      "kind": "opened",
-      "repo": "sgl-project/sglang",
-      "priority_score": 35
-    },
-    {
-      "number": 52441,
-      "title": "[Bugfix][Multimodal] Keep Gemma 4 video frame counts on CPU",
-      "author": "chaunceyjiang",
-      "url": "https://github.com/vllm-project/vllm/pull/52441",
-      "time": "2026-08-15T09:34:09Z",
-      "categories": [
-        "Ascend / NPU",
-        "Quantization",
-        "MoE",
-        "Attention / KV",
-        "Scheduler / Runtime",
-        "Omni / Multimodal",
-        "Kernel / Performance"
-      ],
-      "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-      "draft": false,
-      "additions": 7,
-      "deletions": 1,
-      "changed_files": 2,
-      "merge_commit_sha": "f8ae92c360aa83d1a2de955c99f902a8a1348d24",
-      "kind": "opened",
-      "repo": "vllm-project/vllm",
-      "priority_score": 30
-    },
-    {
-      "number": 14358,
-      "title": "[v0.26.0rc][BugFix][MoE] Fix MegaMoe prefill buffer sizing",
-      "author": "jianzs",
-      "url": "https://github.com/vllm-project/vllm-ascend/pull/14358",
-      "time": "2026-08-15T15:52:04Z",
+      "number": 14367,
+      "title": "[v0.26.0rc][Feature][LoRA][MoE] Backport W8A8 dynamic multi-LoRA + shared-expert LoRA from #13365",
+      "author": "Liuchenbing-2026",
+      "url": "https://github.com/vllm-project/vllm-ascend/pull/14367",
+      "time": "2026-08-16T03:55:35Z",
       "categories": [
         "Ascend / NPU",
         "Quantization",
@@ -3433,188 +696,209 @@
       ],
       "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
       "draft": false,
-      "additions": 51,
-      "deletions": 14,
-      "changed_files": 5,
-      "merge_commit_sha": "9d75969b67f444d8505a64a8ca9b6927d52d41d0",
+      "additions": 919,
+      "deletions": 37,
+      "changed_files": 13,
+      "merge_commit_sha": "57ff4648ce8df51492f5e9d876c4a5202bb7aa60",
       "kind": "opened",
       "repo": "vllm-project/vllm-ascend",
       "priority_score": 27
     },
     {
-      "number": 34837,
-      "title": "[AMD] Add concat_and_cast_mha_k_pad_kernel to support 12-head and enable K3 aiter prefill kernel",
-      "author": "1am9trash",
-      "url": "https://github.com/sgl-project/sglang/pull/34837",
-      "time": "2026-08-15T21:39:31Z",
+      "number": 52485,
+      "title": "[Bugfix][Spec Decode] Skip multimodal registry check for draft model configs",
+      "author": "jianliao",
+      "url": "https://github.com/vllm-project/vllm/pull/52485",
+      "time": "2026-08-16T02:42:28Z",
+      "categories": [
+        "Ascend / NPU",
+        "Quantization",
+        "Attention / KV",
+        "Distributed / Comm",
+        "Scheduler / Runtime",
+        "Omni / Multimodal"
+      ],
+      "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
+      "draft": false,
+      "additions": 19,
+      "deletions": 0,
+      "changed_files": 2,
+      "merge_commit_sha": "94a507ecaca5b717c433d36167886be893708fec",
+      "kind": "opened",
+      "repo": "vllm-project/vllm",
+      "priority_score": 27
+    },
+    {
+      "number": 31794,
+      "title": "[AMD][Fix] Qwen3.5: guard zero-grid launch in fused_qk_gemma_rmsnorm(_with_gate) (HIP invalid configuration on idle DP rank)",
+      "author": "yichiche",
+      "url": "https://github.com/sgl-project/sglang/pull/31794",
+      "time": "2026-08-16T04:02:54Z",
       "categories": [
         "Quantization",
         "MoE",
         "Attention / KV",
+        "Distributed / Comm",
         "Scheduler / Runtime",
-        "Omni / Multimodal",
         "Kernel / Performance"
       ],
       "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
       "draft": false,
-      "additions": 72,
-      "deletions": 0,
-      "changed_files": 1,
-      "merge_commit_sha": "4d0c5a89af7061178e4b7ab11d84c4dd2bc92482",
-      "kind": "merged",
-      "repo": "sgl-project/sglang",
-      "priority_score": 26
-    },
-    {
-      "number": 1551,
-      "title": "[Refactor][MOSS-TTS] Consolidate the audio tokenizer runtime",
-      "author": "CloudRipple",
-      "url": "https://github.com/sgl-project/sglang-omni/pull/1551",
-      "time": "2026-08-15T15:48:51Z",
-      "categories": [
-        "Ascend / NPU",
-        "Attention / KV",
-        "Scheduler / Runtime",
-        "Omni / Multimodal",
-        "Kernel / Performance"
-      ],
-      "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-      "draft": false,
-      "additions": 980,
-      "deletions": 991,
-      "changed_files": 6,
-      "merge_commit_sha": "2d2ff5056f8c321f1dbc2ff6584baf05996ce150",
-      "kind": "merged",
-      "repo": "sgl-project/sglang-omni",
-      "priority_score": 26
-    },
-    {
-      "number": 34923,
-      "title": "Apply latest DeepEP branch",
-      "author": "Fridge003",
-      "url": "https://github.com/sgl-project/sglang/pull/34923",
-      "time": "2026-08-15T08:31:03Z",
-      "categories": [
-        "Ascend / NPU",
-        "Quantization",
-        "MoE",
-        "Distributed / Comm",
-        "Omni / Multimodal",
-        "Kernel / Performance"
-      ],
-      "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-      "draft": true,
-      "additions": 118,
-      "deletions": 0,
-      "changed_files": 4,
-      "merge_commit_sha": "05a3519497516003c8dc1b7bab0ef7e62c3ef859",
-      "kind": "opened",
-      "repo": "sgl-project/sglang",
-      "priority_score": 26
-    },
-    {
-      "number": 34934,
-      "title": "[Perf] Fuse prefill norm/act quantization for NVFP4 W4A4 hybrid models (Qwen3.5 family)",
-      "author": "BBuf",
-      "url": "https://github.com/sgl-project/sglang/pull/34934",
-      "time": "2026-08-15T09:45:33Z",
-      "categories": [
-        "Ascend / NPU",
-        "Quantization",
-        "MoE",
-        "Attention / KV",
-        "Scheduler / Runtime",
-        "Kernel / Performance"
-      ],
-      "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-      "draft": false,
-      "additions": 249,
+      "additions": 27,
       "deletions": 2,
-      "changed_files": 4,
-      "merge_commit_sha": "56e86db7923a2d8402e0d05354d043136ce18836",
-      "kind": "opened",
-      "repo": "sgl-project/sglang",
-      "priority_score": 25
-    },
-    {
-      "number": 13158,
-      "title": "[Refactor] decouple flashcomm and shared expert dp",
-      "author": "jiaqi-lee",
-      "url": "https://github.com/vllm-project/vllm-ascend/pull/13158",
-      "time": "2026-08-15T09:35:33Z",
-      "categories": [
-        "Ascend / NPU",
-        "MoE",
-        "Distributed / Comm",
-        "Scheduler / Runtime",
-        "Kernel / Performance"
-      ],
-      "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-      "draft": false,
-      "additions": 560,
-      "deletions": 132,
-      "changed_files": 19,
-      "merge_commit_sha": "3eb8dede168ad9e24e3bb548ed35db7e658dd40e",
-      "kind": "merged",
-      "repo": "vllm-project/vllm-ascend",
-      "priority_score": 25
-    },
-    {
-      "number": 34471,
-      "title": "[diffusion] Support LTX-2.5",
-      "author": "AgainstEntropy",
-      "url": "https://github.com/sgl-project/sglang/pull/34471",
-      "time": "2026-08-15T15:36:03Z",
-      "categories": [
-        "Ascend / NPU",
-        "Quantization",
-        "Scheduler / Runtime",
-        "Omni / Multimodal",
-        "Kernel / Performance"
-      ],
-      "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-      "draft": false,
-      "additions": 3693,
-      "deletions": 163,
-      "changed_files": 50,
-      "merge_commit_sha": "5c0ace30c03f0d87a9c852373dc6fe4e11687736",
+      "changed_files": 5,
+      "merge_commit_sha": "6314e9e4f5bdadd975969e8781dd1edcb27bb4a7",
       "kind": "merged",
       "repo": "sgl-project/sglang",
       "priority_score": 24
     },
     {
-      "number": 51538,
-      "title": "[Bugfix] Make DSV4 sparse MLA work end-to-end for plain decode, MTP, and DSpark",
-      "author": "lucifer1004",
-      "url": "https://github.com/vllm-project/vllm/pull/51538",
-      "time": "2026-08-15T14:01:32Z",
+      "number": 14364,
+      "title": "[BugFix][v0.25.1][Model] Propagate DeepSeek V4 routed SwiGLU limit",
+      "author": "QwertyJack",
+      "url": "https://github.com/vllm-project/vllm-ascend/pull/14364",
+      "time": "2026-08-16T01:40:00Z",
       "categories": [
+        "Ascend / NPU",
         "Quantization",
+        "MoE",
+        "Scheduler / Runtime",
+        "Kernel / Performance"
+      ],
+      "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
+      "draft": false,
+      "additions": 59,
+      "deletions": 0,
+      "changed_files": 2,
+      "merge_commit_sha": "295a01ee3f8e7991a99060fbaa36a5c418d0e78f",
+      "kind": "opened",
+      "repo": "vllm-project/vllm-ascend",
+      "priority_score": 24
+    },
+    {
+      "number": 51318,
+      "title": "[Bugfix][DSv4] Revert adaptive C128A metadata packing",
+      "author": "tobymao",
+      "url": "https://github.com/vllm-project/vllm/pull/51318",
+      "time": "2026-08-16T01:39:24Z",
+      "categories": [
+        "Ascend / NPU",
         "MoE",
         "Attention / KV",
         "Distributed / Comm",
         "Scheduler / Runtime",
         "Kernel / Performance"
       ],
-      "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
+      "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
       "draft": false,
-      "additions": 797,
-      "deletions": 120,
-      "changed_files": 20,
-      "merge_commit_sha": "97388c44f9c608f83318e0c9540a536cd7de3e0d",
+      "additions": 7,
+      "deletions": 56,
+      "changed_files": 2,
+      "merge_commit_sha": "edd4c8176cfd98ece8a29beda574378c42971967",
       "kind": "merged",
       "repo": "vllm-project/vllm",
       "priority_score": 24
     },
     {
-      "number": 34948,
-      "title": "[Fix][DSA] Fail loudly when trtllm-gen query rows exceed the CUDA gridDim.z limit instead of silently skipping attention",
-      "author": "zkyue",
-      "url": "https://github.com/sgl-project/sglang/pull/34948",
-      "time": "2026-08-15T12:16:23Z",
+      "number": 34949,
+      "title": "[Diffusion] Route MiniMax H3 VAE attention through native backends",
+      "author": "mickqian",
+      "url": "https://github.com/sgl-project/sglang/pull/34949",
+      "time": "2026-08-16T02:07:27Z",
+      "categories": [
+        "MoE",
+        "Attention / KV",
+        "Distributed / Comm",
+        "Scheduler / Runtime",
+        "Omni / Multimodal",
+        "Kernel / Performance"
+      ],
+      "analysis": "与多模态/语音/视频推理路径和 Omni 能力直接相关。",
+      "draft": false,
+      "additions": 187,
+      "deletions": 290,
+      "changed_files": 10,
+      "merge_commit_sha": "d269a28b47e28c5f74f3baf3401f9a7d294298c2",
+      "kind": "merged",
+      "repo": "sgl-project/sglang",
+      "priority_score": 23
+    },
+    {
+      "number": 34736,
+      "title": "[Diffusion] Unify component residency controls",
+      "author": "mickqian",
+      "url": "https://github.com/sgl-project/sglang/pull/34736",
+      "time": "2026-08-16T03:24:48Z",
+      "categories": [
+        "Quantization",
+        "Distributed / Comm",
+        "Scheduler / Runtime",
+        "Omni / Multimodal",
+        "Kernel / Performance"
+      ],
+      "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
+      "draft": false,
+      "additions": 2627,
+      "deletions": 1421,
+      "changed_files": 70,
+      "merge_commit_sha": "e9fe58139f48ec2a22fe4000ef604fc6862b1bfe",
+      "kind": "merged",
+      "repo": "sgl-project/sglang",
+      "priority_score": 21
+    },
+    {
+      "number": 30808,
+      "title": "[AMD] [GLM5] Enable dense-MHA short-context prefill fallback on gfx950",
+      "author": "Raiden-Makoto",
+      "url": "https://github.com/sgl-project/sglang/pull/30808",
+      "time": "2026-08-16T02:30:15Z",
+      "categories": [
+        "Quantization",
+        "MoE",
+        "Attention / KV",
+        "Scheduler / Runtime",
+        "Kernel / Performance"
+      ],
+      "analysis": "可能影响低比特模型支持、显存/带宽占用或量化推理性能。",
+      "draft": false,
+      "additions": 24,
+      "deletions": 4,
+      "changed_files": 2,
+      "merge_commit_sha": "4c0e85524dc1eff80bf49baf2dea594862611f48",
+      "kind": "merged",
+      "repo": "sgl-project/sglang",
+      "priority_score": 21
+    },
+    {
+      "number": 34984,
+      "title": "[AMD] Make the Kimi-K3 MI35x nightly accuracy-only, and fix the lint blocker",
+      "author": "michaelzhang-ai",
+      "url": "https://github.com/sgl-project/sglang/pull/34984",
+      "time": "2026-08-16T02:01:55Z",
       "categories": [
         "Ascend / NPU",
-        "Quantization",
+        "MoE",
+        "Omni / Multimodal",
+        "Kernel / Performance"
+      ],
+      "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
+      "draft": true,
+      "additions": 1,
+      "deletions": 208,
+      "changed_files": 4,
+      "merge_commit_sha": "c3265cab8a5253fc9c537b0daff0e3a28628a546",
+      "kind": "merged",
+      "repo": "sgl-project/sglang",
+      "priority_score": 19
+    },
+    {
+      "number": 34988,
+      "title": "[Diffusion] Reuse SRT SigLIP vision model",
+      "author": "mickqian",
+      "url": "https://github.com/sgl-project/sglang/pull/34988",
+      "time": "2026-08-16T03:31:57Z",
+      "categories": [
+        "Ascend / NPU",
         "Attention / KV",
         "Distributed / Comm",
         "Scheduler / Runtime",
@@ -3622,36 +906,57 @@
       ],
       "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
       "draft": false,
-      "additions": 16,
-      "deletions": 0,
-      "changed_files": 1,
-      "merge_commit_sha": "8be47d10b2f6ae92184be8a16bcc0cc43a9e71b8",
+      "additions": 147,
+      "deletions": 268,
+      "changed_files": 5,
+      "merge_commit_sha": "85ff273df25eaa03a067c5b9b27ecd8a89c914c4",
       "kind": "opened",
       "repo": "sgl-project/sglang",
-      "priority_score": 24
+      "priority_score": 18
     },
     {
-      "number": 14343,
-      "title": "[v0.26.0rc][Bugfix][MoE] Fix SiTU activation raising NotImplementedError in unquantized MoE MLP path",
-      "author": "EliasKaslan",
-      "url": "https://github.com/vllm-project/vllm-ascend/pull/14343",
-      "time": "2026-08-15T09:26:45Z",
+      "number": 34985,
+      "title": "[AMD] Add the Kimi-K3 MI35x perf sweep inside the accuracy job",
+      "author": "michaelzhang-ai",
+      "url": "https://github.com/sgl-project/sglang/pull/34985",
+      "time": "2026-08-16T01:49:34Z",
       "categories": [
         "Ascend / NPU",
         "Quantization",
         "MoE",
-        "Scheduler / Runtime",
         "Kernel / Performance"
       ],
       "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
-      "draft": false,
-      "additions": 6,
-      "deletions": 1,
-      "changed_files": 1,
-      "merge_commit_sha": "3d37ef9ae9ee05f8d758a2f651ed6a5e1dc87317",
+      "draft": true,
+      "additions": 181,
+      "deletions": 0,
+      "changed_files": 3,
+      "merge_commit_sha": "bf1bc2007f54cf014941ac88fe799a98e2d8242d",
       "kind": "opened",
-      "repo": "vllm-project/vllm-ascend",
-      "priority_score": 24
+      "repo": "sgl-project/sglang",
+      "priority_score": 18
+    },
+    {
+      "number": 34984,
+      "title": "[AMD] Make the Kimi-K3 MI35x nightly accuracy-only, and fix the lint blocker",
+      "author": "michaelzhang-ai",
+      "url": "https://github.com/sgl-project/sglang/pull/34984",
+      "time": "2026-08-16T01:46:28Z",
+      "categories": [
+        "Ascend / NPU",
+        "MoE",
+        "Omni / Multimodal",
+        "Kernel / Performance"
+      ],
+      "analysis": "直接影响 Ascend/NPU backend 的兼容性、算子路径或性能。",
+      "draft": true,
+      "additions": 1,
+      "deletions": 208,
+      "changed_files": 4,
+      "merge_commit_sha": "c3265cab8a5253fc9c537b0daff0e3a28628a546",
+      "kind": "opened",
+      "repo": "sgl-project/sglang",
+      "priority_score": 17
     }
   ]
 }
